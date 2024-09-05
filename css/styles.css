@@ -1,0 +1,79 @@
+body {
+  background-color: #212121;
+  color: #ffffff;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #212121;
+  padding: 10px 20px; /* Adjust padding as needed */
+}
+
+.header-container {
+  display: flex;
+  align-items: center; /* Vertically center the items */
+  justify-content: space-between; /* Space between title and nav */
+}
+
+h1 {
+  font-size: 24px; /* Adjust font size as needed */
+  margin: 0; /* Remove default margin */
+}
+
+.topnav {
+  background-color: #212121; /* Optional if you want the background to match */
+}
+
+.fa-solid fa-ticket{
+  padding: 200;
+  margin: 10;
+  
+}
+
+.centered-item {
+  text-align: center;
+  list-style-type: none; 
+}
+
+.topnav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Horizontal alignment of list items */
+}
+
+.topnav li {
+  margin-left: 20px; /* Spacing between menu items */
+}
+
+.topnav a {
+  color: #ffffff; /* Default color for links */
+  text-decoration: none;
+}
+
+.topnav a:hover {
+  text-decoration: underline;
+}
+
+/* Individual link colors */
+.topnav a[href="/book.html"] {
+  color: #FF331F;
+}
+
+.topnav a[href="/login.html"],
+.topnav a[href="/top3.html"] {
+  color: #6F9CEB;
+}
+
+.content {
+  padding: 20px; /* Add padding around the content */
+}
+
+.content h2 {
+  margin-top: 0; /* Remove top margin to align with other elements */
+}
+
+.content p {
+  margin-top: 20px; /* Add space above the paragraph */
+}
