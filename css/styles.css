@@ -25,7 +25,7 @@ header {
 }
 
 h1 {
-  font-size: 24px; /* Adjust font size as needed */
+  font-size: 2000x; /* Adjust font size as needed */
   margin: 0; /* Remove default margin */
 }
 
@@ -33,6 +33,9 @@ h1 {
   background-color: #212121; /* Optional if you want the background to match */
 }
 
+a{
+  font-size: x-large;
+}
 .centered-item .fa-ticket {
    /* Space between icon and text */
   color: #FF331F; /* Default color for the icon */
