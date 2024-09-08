@@ -22,6 +22,7 @@ header {
   font-family: "Bebas Neue",sans-serif;
   align-items: center; /* Vertically center the items */
   justify-content: space-between; /* Space between title and nav */
+  
 }
 
 h1 {
@@ -36,10 +37,15 @@ h1 {
 a{
   font-size: x-large;
 }
+.fa-solid fa-ticket{
+  size: 1000px;
+}
 .centered-item .fa-ticket {
    /* Space between icon and text */
   color: #FF331F; /* Default color for the icon */
+  
   transition: fill 0.3s ease; /* Smooth transition for icon color */
+  
 }
 
 .centered-item .fa-user {
@@ -105,8 +111,29 @@ a{
 }
 
 .box1{
-  height: 500px;
-  background: #2e31c7;
-  background: -webkit-linear-gradient(0deg, #2e31c7 0%, #212121 50%, #000000 100%);
-  background: linear-gradient(0deg, #2e31c7 0%, #212121 50%, #000000 100%);
+  
+    height: 60vh; /* 50% of the viewport height */
+    background: #2e31c7;
+    background: -webkit-linear-gradient(0deg, #2e31c7 0%, #212121 50%, #000000 100%);
+    background: linear-gradient(0deg, #2e31c7 0%, #212121 50%, #000000 100%);
+   
+  
 }
+.title1{
+  padding: 150px;
+  text-align: center;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  gap: 5%; /* Adjust this value to control the space between images */
+  flex-wrap: wrap;
+  
+}
+
+.image-container img {
+  width: 15%;
+  height: auto; /* Maintain aspect ratio */
+}
+
