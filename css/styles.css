@@ -1,3 +1,10 @@
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 body {
   background-color: #212121;
   color: #ffffff;
@@ -12,6 +19,7 @@ header {
 
 .header-container {
   display: flex;
+  font-family: "Bebas Neue",sans-serif;
   align-items: center; /* Vertically center the items */
   justify-content: space-between; /* Space between title and nav */
 }
@@ -25,26 +33,40 @@ h1 {
   background-color: #212121; /* Optional if you want the background to match */
 }
 
-.fa-solid fa-ticket{
-  padding: 200;
-  margin: 10;
-  
+.centered-item .fa-ticket {
+   /* Space between icon and text */
+  color: #FF331F; /* Default color for the icon */
+  transition: fill 0.3s ease; /* Smooth transition for icon color */
 }
 
+.centered-item .fa-user {
+  /* Space between icon and text */
+ color: #6F9CEB; /* Default color for the icon */
+ transition: fill 0.3s ease; /* Smooth transition for icon color */
+}
+
+.centered-item .fa-clapperboard {
+  /* Space between icon and text */
+ color: #6F9CEB; /* Default color for the icon */
+ transition: fill 0.3s ease; /* Smooth transition for icon color */
+}
 .centered-item {
   text-align: center;
+  
   list-style-type: none; 
+  
 }
 
 .topnav ul {
   list-style: none;
+  
   margin: 0;
-  padding: 0;
+  padding: 10;
   display: flex; /* Horizontal alignment of list items */
 }
 
 .topnav li {
-  margin-left: 20px; /* Spacing between menu items */
+  margin-left: 100px; /* Spacing between menu items */
 }
 
 .topnav a {
@@ -53,18 +75,19 @@ h1 {
 }
 
 .topnav a:hover {
-  text-decoration: underline;
-}
-
-/* Individual link colors */
-.topnav a[href="/book.html"] {
   color: #FF331F;
 }
 
-.topnav a[href="/login.html"],
-.topnav a[href="/top3.html"] {
+/* Individual link colors */
+.topnav a[href="/book.html"]:hover { 
+  color: #FF331F;
+}
+
+.topnav a[href="/login.html"]:hover,
+.topnav a[href="/top3.html"]:hover {
   color: #6F9CEB;
 }
+
 
 .content {
   padding: 20px; /* Add padding around the content */
