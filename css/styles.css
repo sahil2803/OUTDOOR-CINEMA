@@ -103,3 +103,10 @@ a{
 .content p {
   margin-top: 20px; /* Add space above the paragraph */
 }
+
+.box1{
+  height: 500px;
+  background: #2e31c7;
+  background: -webkit-linear-gradient(0deg, #2e31c7 0%, #212121 50%, #000000 100%);
+  background: linear-gradient(0deg, #2e31c7 0%, #212121 50%, #000000 100%);
+}
