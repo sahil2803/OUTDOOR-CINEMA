@@ -19,6 +19,7 @@ header {
 
 .header-container {
   display: flex;
+  padding-top: 1%;
   font-family: "Bebas Neue",sans-serif;
   align-items: center; /* Vertically center the items */
   justify-content: space-between; /* Space between title and nav */
@@ -59,11 +60,25 @@ a{
  color: #6F9CEB; /* Default color for the icon */
  transition: fill 0.3s ease; /* Smooth transition for icon color */
 }
+
+
+.hide{
+  position: absolute; /* Remove the icon from the document flow */
+  top: 0%; /* Center the icon vertically */
+  left: 30%; /* Position the icon to the right of the list item */
+  transform: translateY(50%) translateX(10px); /* Adjust vertical positioning */
+  opacity: 0; /* Make the icon invisible */
+  transition: opacity 0.3s, transform 0.3s; /* Smooth transition */
+}
 .centered-item {
-  text-align: center;
-  
-  list-style-type: none; 
-  
+  position: relative; /* Required for absolute positioning of the icon */
+  padding: 10px 5px; /* Adjust padding as needed */
+  /* Add other styling as needed */
+}
+
+.centered-item:hover .hide{
+  opacity: 1; /* Make the icon visible */
+  transform: translateY(-45%) translateX(70%); 
 }
 
 .topnav ul {
@@ -75,10 +90,11 @@ a{
 }
 
 .topnav li {
-  margin-left: 100px; /* Spacing between menu items */
+  margin-left: 50px; /* Spacing between menu items */
 }
 
 .topnav a {
+  padding: 10;
   color: #ffffff; /* Default color for links */
   text-decoration: none;
 }
