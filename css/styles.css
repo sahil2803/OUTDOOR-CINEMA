@@ -1,9 +1,14 @@
 .bebas-neue-regular {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
-  font-style: normal;
+  font-style:normal;
 }
 
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
 
 body {
   background-color: #212121;
@@ -23,6 +28,9 @@ header {
   font-family: "Bebas Neue",sans-serif;
   align-items: center; /* Vertically center the items */
   justify-content: space-between; /* Space between title and nav */
+  background-color: rgba(0, 0, 0, 0); /* Fully transparent background */
+    padding: 10px; /* Adjust padding as needed */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   
 }
 
@@ -32,7 +40,8 @@ h1 {
 }
 
 .topnav {
-  background-color: #212121; /* Optional if you want the background to match */
+  /* background-color: #000000; Optional if you want the background to match */
+  background-color: rgba(0, 0, 0, 0); /* Fully transparent background */
 }
 
 a{
@@ -78,7 +87,7 @@ a{
 
 .centered-item:hover .hide{
   opacity: 1; /* Make the icon visible */
-  transform: translateY(-45%) translateX(70%); 
+  transform: translateY(-45%) translateX(65%); 
 }
 
 .topnav ul {
@@ -130,7 +139,8 @@ a{
   text-align: center;
 }
 .box1{
-  
+  z-index: 1; /* Ensure it's beneath the header */
+  margin-top: -100px; /* Adjust based on your layout to overlap the header */
     height: 60vh; /* 50% of the viewport height */
     background: #2e31c7;
     background: -webkit-linear-gradient(0deg, #2e31c7 0%, #212121 50%, #000000 100%);
@@ -184,6 +194,8 @@ a{
   opacity: 0; /* Hidden by default */
   transition: opacity 0.6s ease; /* Smooth transition */
   text-align: center; /* Center text */
+   font-family: "Bebas Neue",sans-serif;
+   font-size: x-large;
 }
 
 /* Show overlay on hover */
