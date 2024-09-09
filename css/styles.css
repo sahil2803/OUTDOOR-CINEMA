@@ -141,15 +141,49 @@ a{
 }
 
 .image-container {
+  padding-top: 1.25%;
   display: flex;
-  justify-content: center;
-  gap: 5%; /* Adjust this value to control the space between images */
-  flex-wrap: wrap;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Optional: center items vertically if needed */
+  flex-wrap: wrap; /* Allow images to wrap to the next line */
+  gap: 30px; /* Adjust space between images as needed */
+}
+
+/* Style each image container */
+.image-wrapper {
+  position: relative;
   
+  
+  width: 20%; /* Adjust as needed */
+  height: 100%; /* Adjust as needed */
+  overflow: hidden; /* Hide overflow to ensure text doesn't spill out */
 }
 
-.image-container img {
-  width: 15%;
-  height: auto; /* Maintain aspect ratio */
+/* Style the images */
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure image covers the container */
 }
 
+/* Overlay container */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95); /* Semi-transparent background */
+  color: white; /* Text color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.6s ease; /* Smooth transition */
+  text-align: center; /* Center text */
+}
+
+/* Show overlay on hover */
+.image-wrapper:hover .overlay {
+  opacity: 100; /* Show overlay */
+}
