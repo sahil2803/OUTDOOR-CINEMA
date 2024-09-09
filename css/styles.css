@@ -126,6 +126,9 @@ a{
   margin-top: 20px; /* Add space above the paragraph */
 }
 
+.sections{
+  text-align: center;
+}
 .box1{
   
     height: 60vh; /* 50% of the viewport height */
