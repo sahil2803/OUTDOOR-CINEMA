@@ -624,3 +624,11 @@ footer p {
       padding: 10px; /* Adjust padding for smaller screens */
     }
   }
+
+@media (max-width: 576px) {
+  .footer-content {
+    padding: 5px; /* Further reduce padding for very small screens */
+    flex-direction: column; /* Ensure vertical stacking */
+    align-items: center; /* Center align items */
+  }
+}
