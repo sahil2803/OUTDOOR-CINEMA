@@ -23,6 +23,7 @@ header {
 }
 
 .header-container {
+  
   display: flex;
   padding-top: 1%;
   font-family: "Bebas Neue",sans-serif;
@@ -153,6 +154,7 @@ a{
 }
 
 .sections{
+  padding-top: 150px;
   text-align: center;
    display: flex; /* Enable Flexbox */
     justify-content: center; /* Center content horizontally */
@@ -285,13 +287,16 @@ a{
 
 
 .image-container {
-  padding-top: 1.25%;
+  padding-top: 5%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center; /* Center items horizontally */
   align-items: center; /* Optional: center items vertically if needed */
   flex-wrap: wrap; /* Allow images to wrap to the next line */
   gap: 30px; /* Adjust space between images as needed */
 }
+
+
 
 /* Style each image container */
 .image-wrapper {
@@ -309,6 +314,7 @@ a{
   height: 100%;
   object-fit: cover; /* Ensure image covers the container */
 }
+
 
 /* Overlay container */
 .overlay {
@@ -337,6 +343,20 @@ a{
 
 
 
+@media (max-width: 900px) {
+  .image-wrapper {
+    flex: 1 1 33.33%; /* 3 columns for medium screens */
+  }
+}
+
+
+.box2{
+  height: 100vh; /* 50% of the viewport height */
+}
+
+.box4{
+  height: 100vh; /* 50% of the viewport height */
+}
 .table{
   width: 100%;
   padding-top: 1.25%;
@@ -364,6 +384,23 @@ a{
   padding: 8px; /* Padding inside table cells */
   text-align: left; /* Align text to the left */
   /* border: 1px solid #ddd; Light border for readability */
+}
+
+
+.frosted-table {
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  padding: 10px;
+  margin: 10px;
+  color: #fff; /* Text color */
+}
+
+.box3{
+
+  height: 100vh; /* 50% of the viewport height */
 }
 
 
