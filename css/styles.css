@@ -23,15 +23,16 @@ header {
 }
 
 .header-container {
-  
+  position: fixed;
+  width: 95%;
   display: flex;
   padding-top: 1%;
   font-family: "Bebas Neue",sans-serif;
   align-items: center; /* Vertically center the items */
   justify-content: space-between; /* Space between title and nav */
-  background-color: rgba(0, 0, 0, 0); /* Fully transparent background */
-    padding: 10px; /* Adjust padding as needed */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.09); /* Fully transparent background */
+  padding: 10px; /* Adjust padding as needed */
+ z-index: 1000;
   
 }
 
@@ -41,6 +42,7 @@ h1 {
 }
 
 .topnav {
+  
   /* background-color: #000000; Optional if you want the background to match */
   background-color: rgba(0, 0, 0, 0); /* Fully transparent background */
 }
@@ -359,7 +361,7 @@ a{
 }
 .table{
   width: 100%;
-  padding-top: 1.25%;
+  padding-top: 5%;
   display: flex;
   justify-content: center; /* Center items horizontally */
   align-items: center; /* Optional: center items vertically if needed */
