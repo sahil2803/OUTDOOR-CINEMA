@@ -40,6 +40,12 @@ h1 {
   font-size: 2000x; /* Adjust font size as needed */
   margin: 0; /* Remove default margin */
 }
+ @media (max-width: 768px) {  
+  .header-container{
+    padding-left: 150px;
+    align-items: center;
+  }
+}
 
 .topnav {
   
@@ -167,7 +173,7 @@ a{
 .box1{
   z-index: 1; /* Ensure it's beneath the header */
   margin-top: -100px; /* Adjust based on your layout to overlap the header */
-    height: 100vh; /* 50% of the viewport height */
+    height: 110vh; /* 50% of the viewport height */
     background: #2e31c7;
     background: -webkit-linear-gradient(0deg, #2e31c7 0%, #212121 50%, #000000 100%);
     background: linear-gradient(0deg, #2e31c7 0%, #212121 50%, #000000 100%);
@@ -195,6 +201,8 @@ a{
   box-sizing: border-box; /* Include padding in total width */
   
 }
+
+
 
 /* Individual tagline item styling */
 .tagline-item {
