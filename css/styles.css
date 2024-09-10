@@ -125,6 +125,21 @@ a{
 }
 
 
+@media (max-width: 768px) {
+  .topnav ul {
+    display: none; /* Hide menu items by default */
+    flex-direction: column; /* Stack menu items vertically */
+    width: 100%; /* Full width for the dropdown */
+    background-color: #212121; /* Background color for the dropdown */
+    position: absolute;
+    top: 60px; /* Adjust based on the height of the header */
+    left: 0;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+
 .content {
   padding: 20px; /* Add padding around the content */
 }
@@ -139,21 +154,135 @@ a{
 
 .sections{
   text-align: center;
+   display: flex; /* Enable Flexbox */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    flex-direction: column;
+  
 }
 .box1{
   z-index: 1; /* Ensure it's beneath the header */
   margin-top: -100px; /* Adjust based on your layout to overlap the header */
-    height: 60vh; /* 50% of the viewport height */
+    height: 100vh; /* 50% of the viewport height */
     background: #2e31c7;
     background: -webkit-linear-gradient(0deg, #2e31c7 0%, #212121 50%, #000000 100%);
     background: linear-gradient(0deg, #2e31c7 0%, #212121 50%, #000000 100%);
-   
+    display: flex; /* Enable Flexbox */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    flex-direction: column;
   
 }
 .title1{
-  padding: 150px;
+  padding-top: 300px;
   text-align: center;
+  margin-bottom: 100px;
+  
 }
+/* Container for tagline items */
+.taglines {
+
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(3, 1fr); /* Create 3 equal-width columns */
+  gap: 20px; /* Space between grid items */
+  text-align: center; /* Center align text */
+  padding: 20px; /* Add padding around the container */
+  width: 100%; /* Full width of the parent container */
+  box-sizing: border-box; /* Include padding in total width */
+  
+}
+
+/* Individual tagline item styling */
+.tagline-item {
+   /* Adjust this value to move tagline items down */
+  padding: 20px; /* Padding for spacing */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border with opacity */
+  border-radius: 8px; /* Rounded corners */
+  
+  backdrop-filter: blur(10px); /* Blur effect for background */
+  
+  max-width: 100%; /* Prevent overflow */
+  box-sizing: border-box; /* Include padding and border in width */
+  overflow: hidden; /* Ensure no overflow */
+}
+
+/* Heading styling within tagline items */
+.taglines h2 {
+  margin-bottom: 15px; /* Space between heading and description */
+  font-size: 1.8rem; /* Font size for headings */
+  font-weight: bold; /* Bold headings */
+  color: #ffffff; /* Color for better readability */
+}
+
+/* Description styling */
+.tagdescription {
+  display: flex;
+  flex-direction: column; /* Stack paragraphs vertically */
+  align-items: center; /* Center text horizontally */
+  gap: 15px; /* Space between paragraphs */
+  line-height: 1.6; /* Increased line height for readability */
+}
+
+/* Paragraph styling within tagline items */
+.tagdescription p {
+  margin: 0; /* Remove default margin */
+  font-size: 1rem; /* Font size for descriptions */
+  color: #dddddd; /* Color for better contrast */
+  max-width: 100%; /* Ensure text fits within container */
+  overflow: hidden; /* Prevent overflow */
+  text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+  white-space: normal; /* Allow text to wrap */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 800px) {
+  .taglines {
+    
+    grid-template-columns: 1fr; /* Single column layout on small screens */
+    gap: 10px; /* Reduce space between items */
+  }
+  .title1{
+    margin-bottom: 0;
+  }
+
+  .taglines h2 {
+    font-size: 1.5rem; /* Smaller font size for headings */
+  }
+
+  .tagdescription p {
+   
+    display: none; /* Remove the tagdescription text */
+  
+    max-width: 100%; /* Ensure text fits within the container */
+  }
+}
+
+/* Styling for each heading */
+.taglines h1 {
+  /* Remove default margin */
+  font-size: 2rem; /* Adjust font size as needed */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .image-container {
   padding-top: 1.25%;
@@ -297,3 +426,15 @@ footer p {
 .socials a:hover {
   opacity: 0.7; /* Slight fade effect on hover */
 }
+
+@media (max-width: 1024px) {
+  .footer-content {
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center align items */
+  }}
+
+  @media (max-width: 768px) {
+    .footer-content {
+      padding: 10px; /* Adjust padding for smaller screens */
+    }
+  }
