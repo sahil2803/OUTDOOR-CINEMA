@@ -11,7 +11,9 @@
 }
 
 body {
-  background-color: #212121;
+  
+  background: -webkit-linear-gradient(0deg, #2e31c7 0%, #212121 50%, #000000 100%);
+  background: linear-gradient(0deg, #2e31c7 0%, #212121 50%, #000000 100%);
   color: #ffffff;
   margin: 0;
   font-family: Arial, sans-serif;
@@ -42,8 +44,11 @@ h1 {
 }
  @media (max-width: 768px) {  
   .header-container{
-    padding-left: 150px;
-    align-items: center;
+    
+    
+  }
+  .table{
+    flex-wrap: wrap;
   }
 }
 
@@ -134,6 +139,8 @@ a{
 }
 
 
+
+
 @media (max-width: 768px) {
   .topnav ul {
     display: none; /* Hide menu items by default */
@@ -147,6 +154,68 @@ a{
     margin: 0;
   }
 }
+
+.hamburger {
+  display: none; /* Hide by default */
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+/* Dropdown menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none; /* Hide dropdown by default */
+  position: absolute;
+  left: 0;
+  background-color: #444; /* Dropdown background color */
+  min-width: 160px; /* Minimum width */
+  z-index: 1000; /* Ensure dropdown is on top */
+}
+
+.dropdown-menu li {
+  padding: 12px 16px;
+}
+
+.dropdown-menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .topnav ul {
+      display: none; /* Hide menu items by default */
+      flex-direction: column; /* Stack menu items vertically */
+      width: 100%; /* Full width for the dropdown */
+      background-color: #212121; /* Background color for the dropdown */
+      position: absolute;
+      top: 60px; /* Adjust based on the height of the header */
+      left: 0;
+      padding: 0;
+      margin: 0;
+  }
+
+  .topnav ul.show {
+      display: flex; /* Show menu items when toggled */
+  }
+
+  .hamburger {
+      display: block; /* Show hamburger icon on small screens */
+  }
+}
+
 
 
 .content {
