@@ -88,7 +88,9 @@ a{
 .centered-item:hover .hide{
   opacity: 1; /* Make the icon visible */
   transform: translateY(-45%) translateX(65%); 
+
 }
+
 
 .topnav ul {
   list-style: none;
@@ -198,7 +200,100 @@ a{
    font-size: x-large;
 }
 
+
 /* Show overlay on hover */
 .image-wrapper:hover .overlay {
   opacity: 100; /* Show overlay */
+}
+
+
+
+.table{
+  width: 100%;
+  padding-top: 1.25%;
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Optional: center items vertically if needed */
+  flex-wrap: wrap; /* Allow images to wrap to the next line */
+  gap: 30px; 
+}
+
+
+.table-title{
+  font-family: "Bebas Neue",sans-serif;
+  font-size: x-large;
+}
+
+.table table {
+  width: 100%; /* Full width of the table container */
+  max-width: 300px; /* Maximum width of each table; adjust as needed */
+  border-collapse: collapse; /* Collapse borders for cleaner look */
+  /* Additional table styling */
+}
+
+.table th, .table td {
+  padding: 8px; /* Padding inside table cells */
+  text-align: left; /* Align text to the left */
+  /* border: 1px solid #ddd; Light border for readability */
+}
+
+
+
+footer {
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center items horizontally */
+  padding: 20px; /* Add padding around the footer */
+  background-color: #333; /* Dark background color */
+  color: white; /* Text color */
+  font-family: Arial, sans-serif; /* Font family */
+}
+
+footer p {
+  margin: 0 0 20px 0; /* Margin for the copyright text */
+}
+
+.links-container,
+.socials-container {
+  text-align: center; /* Center-align text within containers */
+  margin-bottom: 20px; /* Space between sections */
+}
+
+.links-container h3,
+.socials-container h3 {
+  margin: 0 0 10px 0; /* Space below the headings */
+  font-size: 1.2rem; /* Font size for the headings */
+}
+
+.links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2x2 grid layout with equal-width columns */
+  gap: 10px; /* Space between grid items */
+  font-size: 1rem; /* Adjust font size as needed */
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+  text-align: center; /* Center-align text within grid cells */
+}
+
+.links a {
+  color: #6F9CEB; /* Link color */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.links a:hover {
+  text-decoration: underline; /* Underline links on hover */
+}
+
+.socials {
+  font-size: 2rem; /* Size of the social icons */
+}
+
+.socials a {
+  color: white; /* Color of social icons */
+  margin: 0 10px; /* Space between icons */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.socials a:hover {
+  opacity: 0.7; /* Slight fade effect on hover */
 }
