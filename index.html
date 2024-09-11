@@ -23,7 +23,7 @@
 
 </head>
 <body >
-    <header>
+    <header id="header">
         <div class="header-container">
           <button class="hamburger" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
             <h1>OutDoor Cinema</h1>
@@ -263,7 +263,60 @@
   <p>&copy; 2024 OutDoor Cinema</p>
 </footer>
 
-    
+<script>
+
+  /* Variable declarations all in one place */
+  let signup = document.getElementById("signupbtn");
+  let login = document.getElementById("logInbtn");
+  let name = document.getElementById("name");
+  let title = document.getElementById("title");
+  let formShowbtn = document.getElementById("formShow");
+  let closePopupButton = document.getElementById('closePopup');
+  let overlay = document.getElementById('form');
+
+  /* These just control the seemingly disabled buttons */
+  signup.onclick = function() {
+    name.style.maxHeight = 0;
+    title.innerHTML = "Sign In";
+    signup.classList.add("disabled");
+    login.classList.remove("disabled");
+  }
+
+  login.onclick = function() {
+      name.style.maxHeight = '70px';
+      title.innerHTML = "Sign Up";
+      signup.classList.remove("disabled");
+      login.classList.add("disabled");
+  }
+
+
+
+  /* Show or hide the form, blur the background, and set focus to the form block */
+  formShowbtn.addEventListener('click', function() {
+      if (form.style.display === 'none') {
+          document.getElementById("header").classList.add('blurred');   
+          document.getElementsByTagName('Box1').classList.add("blurred");
+          document.getElementsByTagName('Box2').classList.add("blurred");
+          document.getElementsByTagName('Box3').classList.add("blurred");
+          document.getElementsByTagName('Box4').classList.add("blurred");
+          
+          overlay.style.display = 'block';
+          form.focus();
+          form.classList.add("focus");
+      } else {
+          document.body.classList.remove('blurred');
+          overlay.style.display = 'none';
+          form.style.display = 'none';
+      }
+  });
+
+  /* Close the popup when the button is clicked */
+  closePopupButton.addEventListener('click', function() {
+      document.body.classList.remove('blurred');
+      overlay.style.display = 'none';
+      form.style.display = 'none';
+  });
+  </script>  
    
 </body>
 
