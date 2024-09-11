@@ -783,6 +783,7 @@ footer p {
     padding: 50px 60px 70px;
     text-align: center;
     padding: auto;
+    font-family: 'Bebas Neue', sans-serif;
 }
 .inputFeild{
     display: flex; /*makes the icon overlap the image or be seemingly on it*/
