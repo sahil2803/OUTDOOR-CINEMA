@@ -296,7 +296,10 @@ a{
 }
 
 
-
+.home-link {
+  text-decoration: none; /* Remove underline from the link */
+  color: inherit; /* Inherit the text color from the parent element */
+}
 /* Individual tagline item styling */
 .tagline-item {
    /* Adjust this value to move tagline items down */
