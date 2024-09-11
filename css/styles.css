@@ -300,6 +300,10 @@ a{
   text-decoration: none; /* Remove underline from the link */
   color: inherit; /* Inherit the text color from the parent element */
 }
+
+.header-container h1:hover {
+  opacity: 0.8; /* Example hover effect */
+}
 /* Individual tagline item styling */
 .tagline-item {
    /* Adjust this value to move tagline items down */
@@ -742,6 +746,25 @@ a{
   height: 100vh; /* 50% of the viewport height */
   max-width: 100%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
