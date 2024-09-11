@@ -10,6 +10,14 @@
   font-style: normal;
 }
 
+
+/* Ensure content sits above the overlay */
+main {
+  position: relative; /* To ensure it’s above the overlay */
+  z-index: 1;
+}
+
+
 body {
   
   background: -webkit-linear-gradient(0deg, #2e31c7 0%, #212121 50%, #000000 100%);
@@ -227,13 +235,17 @@ a{
   margin-top: 20px; /* Add space above the paragraph */
 }
 
-.sections{
-  padding-top: 150px;
+.sections {
+  margin-bottom: 1rem; /* Reduce space below the heading */
+  padding-top: 2rem; /* Reduce padding at the top for a smaller section height */
+  padding-bottom: 1rem; /* Add padding at the bottom for spacing */
   text-align: center;
-   display: flex; /* Enable Flexbox */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    flex-direction: column;
+  display: flex; /* Enable Flexbox */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  flex-direction: column; /* Arrange items in a column */
+  box-sizing: border-box; /* Include padding and border in width/height calculations */
+
   
 }
 .box1{
@@ -312,11 +324,98 @@ a{
   white-space: normal; /* Allow text to wrap */
 }
 
+
+
+
+
+@media (max-width: 950px) {
+  .taglines {
+    padding-bottom: 15%;
+    grid-template-columns: 1 2fr; /* Single column layout on small screens */
+   /* Reduce space between items */
+  }
+  .tagline-item{
+    padding: 0%;
+  }
+  .title1{
+    margin-bottom: 0;
+    font-size: 1rem;
+
+  }
+
+  .taglines h2 {
+    font-size: 1.2rem; /* Smaller font size for headings */
+  }
+
+  .tagdescription p {
+    display: none;
+   
+    /* Remove the tagdescription text */
+  
+    
+  }
+}
+
+
+@media (max-width: 900px) {
+  .taglines {
+    padding-bottom: 15%;
+    grid-template-columns: 1 2fr; /* Single column layout on small screens */
+   /* Reduce space between items */
+  }
+  .tagline-item{
+    padding: 0%;
+  }
+  .title1{
+    margin-bottom: 0;
+    font-size: 1rem;
+
+  }
+
+  .taglines h2 {
+    font-size: 1.2rem; /* Smaller font size for headings */
+  }
+
+  .tagdescription p {
+   
+    /* Remove the tagdescription text */
+  
+    
+  }
+}
+
+
+@media (max-width: 850px) {
+  .taglines {
+    padding-bottom: 15%;
+    grid-template-columns: 1 2fr; /* Single column layout on small screens */
+   /* Reduce space between items */
+  }
+  .tagline-item{
+    padding: 0%;
+  }
+  .title1{
+    margin-bottom: 0;
+    font-size: 1rem;
+
+  }
+
+  .taglines h2 {
+    font-size: 1.2rem; /* Smaller font size for headings */
+  }
+
+  .tagdescription p {
+   display: none;
+    /* Remove the tagdescription text */
+  
+    
+  }
+}
 /* Responsive design adjustments */
 @media (max-width: 800px) {
   .taglines {
     
-    grid-template-columns: 1fr; /* Single column layout on small screens */
+    grid-template-columns: 1 2fr; /* Single column layout on small screens */
     gap: 10px; /* Reduce space between items */
   }
   .title1{
@@ -335,6 +434,43 @@ a{
   }
 }
 
+@media (max-width: 400px) {
+  .taglines {
+    
+    grid-template-columns: 1fr; /* Single column layout on small screens */
+    gap: 5%; /* Reduce space between items */
+    padding-bottom: 60%;
+    margin-top: -60rem;
+  }
+
+  .box1{
+    
+  }
+  .title1{
+    margin-bottom: 0;
+    padding-bottom: 70rem;
+
+    
+  }
+  .tagline-item{
+    padding: 0%;
+   
+  }
+
+  .taglines h2 {
+    font-size: 0.8rem; /* Smaller font size for headings */
+  }
+
+  .tagdescription p {
+   
+    display: none; /* Remove the tagdescription text */
+  
+    max-width: 100%; /* Ensure text fits within the container */
+  }
+}
+
+
+
 /* Styling for each heading */
 .taglines h1 {
   /* Remove default margin */
@@ -344,36 +480,6 @@ a{
 
 
 
-
-
-
-@media (max-width: 1200px) {
-  .image-wrapper {
-    width: 25%; /* Adjust for slightly smaller screens */
-    height: 180px; /* Adjust height for smaller screens */
-  }
-}
-
-@media (max-width: 992px) {
-  .image-wrapper {
-    width: 33.33%; /* Adjust for medium screens, three items per row */
-    height: 160px; /* Adjust height for medium screens */
-  }
-}
-
-@media (max-width: 768px) {
-  .image-wrapper {
-    width: 50%; /* Adjust for tablets, two items per row */
-    height: 150px; /* Adjust height for tablets */
-  }
-}
-
-@media (max-width: 576px) {
-  .image-wrapper {
-    width: 100%; /* Adjust for mobile screens, one item per row */
-    height: 120px; /* Reduce height for smaller screens */
-  }
-}
 
 
 
@@ -392,24 +498,28 @@ a{
 
 
 .image-container {
-  padding-top: 5%;
+  padding-top: 5rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center; /* Center items horizontally */
-  align-items: center; /* Optional: center items vertically if needed */
-  flex-wrap: wrap; /* Allow images to wrap to the next line */
-  gap: 30px; /* Adjust space between images as needed */
+  align-items: fle; /* Optional: center items vertically if needed */
+  gap: 2rem; /* Adjust space between images as needed */
+  
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 0 auto;
+  
 }
-
-
-
+.box4, .box3 {
+  padding-top: 10rem; /* Default padding for larger screens */
+  box-sizing: border-box; /* Include padding and border in width/height calculations */
+}
 /* Style each image container */
 .image-wrapper {
   position: relative;
-  
-  
-  width: 20%; /* Adjust as needed */
-  height: 100%; /* Adjust as needed */
+  width: 15%; /* Default width for larger screens */
+  height: auto; /* Maintain aspect ratio of images */
   overflow: hidden; /* Hide overflow to ensure text doesn't spill out */
 }
 
@@ -419,6 +529,11 @@ a{
   height: 100%;
   object-fit: cover; /* Ensure image covers the container */
 }
+
+/* Responsive design for smaller screens */
+
+
+
 
 
 /* Overlay container */
@@ -430,6 +545,7 @@ a{
   height: 100%;
   background: rgba(0, 0, 0, 0.95); /* Semi-transparent background */
   color: white; /* Text color */
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -448,11 +564,27 @@ a{
 
 
 
-@media (max-width: 900px) {
+.box4 ,footer,.box5{
+  padding-top: 25rem;
+}
+
+@media (max-width: 400px) {
+  .image-container {
+    gap: 0.25rem; /* Further reduce space between images */
+    padding: 0.25rem; /* Further reduce padding */
+  }
+
   .image-wrapper {
-    flex: 1 1 33.33%; /* 3 columns for medium screens */
+    flex: 1 1 calc(50% - 0.25rem); /* 2 items per row */
+  }
+  .box4, .box5 ,footer{
+    padding-top: 100vh; /* Default padding for larger screens */
+    box-sizing: border-box; /* Include padding and border in width/height calculations */
   }
 }
+
+
+/* Further adjustments for very small screens (phones in portrait mode) */
 
 
 .box2{
@@ -462,6 +594,8 @@ a{
 .box4{
   height: 100vh; /* 50% of the viewport height */
 }
+
+
 .table{
   width: 100%;
   padding-top: 5%;
@@ -504,41 +638,6 @@ a{
 }
 
 
-@media (max-width: 992px) {
-  .table table {
-    max-width: 80%; /* Further reduce max width for medium-sized screens */
-  }
-}
-
-@media (max-width: 768px) {
-  .table table {
-    max-width: 100%; /* Full width for tablets */
-  }
-  
-  /* Adjust padding and text size for smaller screens */
-  .table-title {
-    font-size: large; /* Smaller font size for titles */
-  }
-  
-  .table th, .table td {
-    padding: 6px; /* Reduce padding in table cells */
-  }
-}
-
-@media (max-width: 576px) {
-  .table {
-    padding-top: 2%; /* Reduce padding on very small screens */
-  }
-  
-  .table-title {
-    font-size: medium; /* Further reduce font size for titles */
-  }
-  
-  .table th, .table td {
-    padding: 4px; /* Further reduce padding in table cells */
-    font-size: 0.9rem; /* Slightly smaller font size for table content */
-  }
-}
 
 
 
@@ -550,6 +649,7 @@ a{
 .box3{
 
   height: 100vh; /* 50% of the viewport height */
+  max-width: 100%;
 }
 
 
@@ -611,24 +711,4 @@ footer p {
 
 .socials a:hover {
   opacity: 0.7; /* Slight fade effect on hover */
-}
-
-@media (max-width: 1024px) {
-  .footer-content {
-    flex-direction: column; /* Stack content vertically */
-    align-items: center; /* Center align items */
-  }}
-
-  @media (max-width: 768px) {
-    .footer-content {
-      padding: 10px; /* Adjust padding for smaller screens */
-    }
-  }
-
-@media (max-width: 576px) {
-  .footer-content {
-    padding: 5px; /* Further reduce padding for very small screens */
-    flex-direction: column; /* Ensure vertical stacking */
-    align-items: center; /* Center align items */
-  }
 }
