@@ -262,6 +262,34 @@
   </div>
   <p>&copy; 2024 OutDoor Cinema</p>
 </footer>
+ 
+<!--                       logIn form                            -->
+<div id="form" class="container" style="display: none; text-align: center;">
+  <h1 id="title">Sign Up</h1>
+  <form>
+    <div class="input">
+      <div class="inputFeild" id="name">
+        <icon><i class="fa-regular fa-user"></i></icon>
+        <input type="text" name="name" placeholder="User Name">
+      </div>
+
+      <div class="inputFeild" id="email">
+        <i class="fa-regular fa-envelope"></i>
+        <input type="email" name="email" placeholder="example@something.another">
+      </div>
+
+      <div class="inputFeild">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" name="password" placeholder="Password">
+      </div>
+      <p id="informp"><a href="#" id="frmlink">Forgot password?</a></p>
+      <button type="button" class="frmbtn" id="signupbtn">Sign Up</button>
+      <button type="Button" class="frmbtn" id="logInbtn">Log In</button>
+      <button type="=button" class="frmbtn" id="closePopup">Cancel</button>
+    </div>
+    
+  </form>
+
 
 <script>
 
@@ -299,7 +327,6 @@
           document.getElementsByTagName('Box2').classList.add("blurred");
           document.getElementsByTagName('Box3').classList.add("blurred");
           document.getElementsByTagName('Box4').classList.add("blurred");
-          
           overlay.style.display = 'block';
           form.focus();
           form.classList.add("focus");
@@ -312,9 +339,13 @@
 
   /* Close the popup when the button is clicked */
   closePopupButton.addEventListener('click', function() {
-      document.body.classList.remove('blurred');
-      overlay.style.display = 'none';
-      form.style.display = 'none';
+    document.getElementById("header").classList.remove('blurred');   
+    document.getElementsByTagName('Box1').classList.remove("blurred");
+    document.getElementsByTagName('Box2').classList.remove("blurred");
+    document.getElementsByTagName('Box3').classList.remove("blurred");
+    document.getElementsByTagName('Box4').classList.remove("blurred");
+    overlay.style.display = 'none';
+    form.style.display = 'none';
   });
   </script>  
    
