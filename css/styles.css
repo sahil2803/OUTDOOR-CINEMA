@@ -69,6 +69,10 @@ a{
 .fa-solid fa-ticket{
   size: 1000px;
 }
+.fa-video{
+  font-size: 5rem;
+  
+}
 .centered-item .fa-ticket {
    /* Space between icon and text */
   color: #FF331F; /* Default color for the icon */
@@ -178,25 +182,36 @@ a{
 
 .dropdown-menu {
   display: none; /* Hide dropdown by default */
-  position: absolute;
-  left: 0;
-  background-color: #444; /* Dropdown background color */
-  min-width: 160px; /* Minimum width */
-  z-index: 1000; /* Ensure dropdown is on top */
+  position: fixed; /* Fixed positioning to cover the viewport */
+  top: 0; /* Align to the top of the viewport */
+  left: 0; /* Align to the left of the viewport */
+  right: 0; /* Align to the right of the viewport */
+  bottom: 10; /* Align to the bottom of the viewport */
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent white background for the glass effect */
+  backdrop-filter: blur(10px); /* Apply a blur effect to the area behind the dropdown */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: subtle border for additional effect */
+  z-index: 1000; /* Ensure dropdown is above other content */
+  overflow: auto; /* Allow scrolling if content exceeds viewport height */
+
 }
 
-.dropdown-menu li {
-  padding: 12px 16px;
-}
 
-.dropdown-menu li a {
-  color: white;
-  text-decoration: none;
-}
+.links-mobile{
+  display: flex;
+    z-index: 1000; /* Ensure dropdown is below the navbar */
+    overflow: auto; /* Allow scrolling if content exceeds viewport height */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    padding-top:1rem;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    gap: 2rem;
+  }
 
 /* Show dropdown on hover */
-.dropdown:hover .dropdown-menu {
+.hamburger:hover .dropdown-menu {
   display: block;
+  
 }
 
 @media (max-width: 768px) {
@@ -269,10 +284,10 @@ a{
 }
 /* Container for tagline items */
 .taglines {
-
+  
   display: grid; /* Use grid layout */
   grid-template-columns: repeat(3, 1fr); /* Create 3 equal-width columns */
-  gap: 20px; /* Space between grid items */
+  gap: 25px; /* Space between grid items */
   text-align: center; /* Center align text */
   padding: 20px; /* Add padding around the container */
   width: 100%; /* Full width of the parent container */
@@ -281,7 +296,14 @@ a{
 }
 
 
+.home-link {
+  text-decoration: none; /* Remove underline from the link */
+  color: inherit; /* Inherit the text color from the parent element */
+}
 
+.header-container h1:hover {
+  opacity: 0.8; /* Example hover effect */
+}
 /* Individual tagline item styling */
 .tagline-item {
    /* Adjust this value to move tagline items down */
@@ -330,12 +352,14 @@ a{
 
 @media (max-width: 950px) {
   .taglines {
-    padding-bottom: 15%;
+    padding-bottom: 20%;
+    column-gap: 5rem;
     grid-template-columns: 1 2fr; /* Single column layout on small screens */
    /* Reduce space between items */
   }
   .tagline-item{
-    padding: 0%;
+    padding: 3%;
+    
   }
   .title1{
     margin-bottom: 0;
@@ -361,6 +385,7 @@ a{
   .taglines {
     padding-bottom: 15%;
     grid-template-columns: 1 2fr; /* Single column layout on small screens */
+
    /* Reduce space between items */
   }
   .tagline-item{
@@ -444,8 +469,23 @@ a{
     gap: 5%; /* Reduce space between items */
     padding-bottom: 60%;
     margin-top: -60rem;
+    .tagline-item{
+    
+      padding: -40px; /* Padding for spacing */
+      border: 1px solid rgba(255, 255, 255, 0.2); /* Light border with opacity */
+      border-radius: 8px; /* Rounded corners */
+      backdrop-filter: blur(10px); /* Blur effect for background */
+      max-width: 100%; /* Prevent overflow */
+     
+   }
   }
-
+  .fa-video{
+    font-size: 3rem;
+    
+    
+    
+    
+  }
  
   .title1{
     margin-bottom: 0;
@@ -706,6 +746,25 @@ a{
   height: 100vh; /* 50% of the viewport height */
   max-width: 100%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
