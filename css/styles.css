@@ -411,8 +411,11 @@ a{
     
   }
 }
+
+  
+
 /* Responsive design adjustments */
-@media (max-width: 800px) {
+@media (max-width: 800px   ){
   .taglines {
     
     grid-template-columns: 1 2fr; /* Single column layout on small screens */
@@ -443,9 +446,7 @@ a{
     margin-top: -60rem;
   }
 
-  .box1{
-    
-  }
+ 
   .title1{
     margin-bottom: 0;
     padding-bottom: 70rem;
@@ -502,7 +503,7 @@ a{
   display: flex;
   flex-wrap: wrap;
   justify-content: center; /* Center items horizontally */
-  align-items: fle; /* Optional: center items vertically if needed */
+  align-items: center; /* Optional: center items vertically if needed */
   gap: 2rem; /* Adjust space between images as needed */
   
   width: 100%;
@@ -565,9 +566,63 @@ a{
 
 
 .box4 ,footer,.box5{
-  padding-top: 25rem;
+  padding-top: 35rem;
 }
 
+
+
+@media (max-width: 800px) { 
+  .image-container {
+    gap: 0.75rem; /* Reduce space between images */
+    padding: 0.75rem; /* Reduce padding */
+  }
+
+  .image-wrapper {
+    flex: 1 1 calc(20% - 0.75rem); /* 3 items per row */
+  }
+
+  .box4, .box5, footer {
+    padding-top: 35rem; /* Adjust padding for smaller screens */
+  }
+ }
+
+/* Media Query for screens with width 800px or less */
+
+
+/* Media Query for screens with width 600px or less */
+  @media (max-width: 600px) {
+    .image-container {
+      gap: 0.5rem; /* Further reduce space between images */
+      padding: 0.5rem; /* Further reduce padding */
+    }
+
+    .image-wrapper {
+      flex: 1 1 calc(50% - 0.5rem); /* 2 items per row */
+    }
+
+    .box4, .box5, footer {
+      padding-top: 4rem; /* Adjust padding for smaller screens */
+    }
+  }
+
+  @media (max-width: 450px) {
+    .image-container {
+      gap: 0.35rem; /* Further reduce space between images */
+      padding: 0.35rem; /* Further reduce padding */
+    }
+  
+    .image-wrapper {
+      flex: 1 1 calc(35% - 0.35rem); /* 2 items per row, accounting for reduced gap */
+    }
+    
+.box4 ,footer,.box5{
+  padding-top: 35rem;
+}
+    
+    
+  }
+
+/* Media Query for screens with width 400px or less */
 @media (max-width: 400px) {
   .image-container {
     gap: 0.25rem; /* Further reduce space between images */
@@ -577,9 +632,9 @@ a{
   .image-wrapper {
     flex: 1 1 calc(50% - 0.25rem); /* 2 items per row */
   }
-  .box4, .box5 ,footer{
-    padding-top: 100vh; /* Default padding for larger screens */
-    box-sizing: border-box; /* Include padding and border in width/height calculations */
+
+  .box4, .box5, footer {
+    padding-top: 50rem; /* Adjust padding for very small screens */
   }
 }
 
