@@ -830,7 +830,6 @@ footer p {
 
 
 
-
 /* DOG */
 /* styles.css */
 
@@ -977,4 +976,94 @@ footer {
 /* Push the footer to the bottom if there's not enough content */
 .content {
   flex: 1; /* Allows the content section to grow and push the footer down */
+}
+=======
+.form{
+    /*code for the form container*/
+    width: 90%;
+    max-width:300px;
+    position:relative;
+    top:50%;
+    left:50%;
+    background-color:rgba(0, 0, 0, 0.99);
+    border: white;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    padding: 50px 60px 70px;
+    text-align: center;
+    padding: auto;
+    font-family: 'Bebas Neue', sans-serif;
+}
+.inputFeild{
+    display: flex; /*makes the icon overlap the image or be seemingly on it*/
+    align-items: center;
+    max-height: 70px;
+    transition: max-height 1s;
+    overflow: hidden;;
+}
+
+.frmbtn{
+  color: #333;
+  border:none;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 12px;
+  text-decoration: none;
+  padding: 0;
+  width:100%;
+  height: 28px;
+  margin: 3px;
+  font-size: 20px;
+}
+
+input{
+    width:100%;
+    margin: 7px;
+    border: 1px;
+    padding: 13px 15px ;
+    border-radius: 20px;
+    background-color: rgb(34, 33, 33);
+
+}
+
+.blurred {
+    filter: blur(5px);
+    pointer-events: none;
+    z-index: 10;
+}
+.focus {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(68, 68, 68);
+    padding: 20px;
+    z-index: 1000; /* High z-index to stay on top */
+    pointer-events: auto;
+    display: block;
+    border-radius: 15px;
+    
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999; /* Slightly lower than the form */
+    display: none;
+}
+
+#informp{
+  margin-top: 1px;
+  font-size: 20px;
+}
+#frmlink{
+  font-size: 10px;
+}
+
+#title{
+  margin-top: 0;
+  margin-bottom: 0;
 }
