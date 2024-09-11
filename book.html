@@ -1,61 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Book Now</title>
+    <meta charset="utf-8">
+    <title>OutDoor Cinema</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+	
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script> -->
+    <!-- <script src="/js/sketch.js"></script> -->
+   
+
+
 </head>
-<body style="background-color: #212121; color: #ffffff;">
-	<!-- Header -->
-	<header>
-		<h1>OutDoor Cinema</h1>
-		<nav style="background-color: #212121;">
-			<ul>
-				<li><a href="/index.html" style="color: #6F9CEB;">Home</a></li>
-				<li><a href="/book.html" style="color: #FF331F;">Book Now</a></li>
-				<li><a href="/about.html" style="color: #6F9CEB;">About us</a></li>
-				<li><a href="/login.html" style="color: #6F9CEB;">Login</a></li>
-				<li><a href="/signup.html" style="color: #6F9CEB;">Signup</a></li>
-				<li><a href="/top3.html" style="color: #6F9CEB;">Top 3 Movie</a></li>
-			  
-			</ul>
-		</nav>
-	</header>
 
-	<!-- Navigation Menu -->
-	
-    
 
-	<!-- Contact Content -->
-	<section id="Book Now">
-		<h2>Book Now</h2>
-		<form id="booking-form">
-			<label for="name">Name:</label>
-			<input type="text" id="name" name="name"><br><br>
-			<label for="email">Email:</label>
-			<input type="email" id="email" name="email"><br><br>
-			<label for="phone">Phone Number:</label>
-			<input type="tel" id="phone" name="phone"><br><br>
-			<label for="tickets">Number of Tickets:</label>
-			<input type="number" id="tickets" name="tickets"><br><br>
-			<label for="seating">Preferred Seating:</label>
-			<select id="seating" name="seating">
-				<option value="general">General Admission</option>
-				<option value="vip">VIP Seating</option>
-			</select><br><br>
-			<input type="submit" value="Book Now">
-		</form>
-       
-	</section>
-
-	<!-- Footer -->
-	<footer>
-			<p>&copy; 2024 OutDoor Cinema</p>
-		<div align="right">
-		  <a href="https://www.instagram.com/" style="color: white;">Instagram</a> |
-		  <a href="https://www.facebook.com/" style="color: white;">Facebook</a>
-	  </div>
-	
-	
+<body >
+    <header>
 		
-	</footer>
+        <div class="header-container">
+          <div class="hamburger ">
+            <button class="hamburger"><i class="fa-solid fa-bars"></i></button>
+            <div class="dropdown-menu">
+              <div class = "links-mobile">
+              <a class = "booking-ticket" href="/book.html" >Book Now</a>
+              <a href="/login.html" >Login/join</a>
+              <a href="/top3.html" >Top 3 Movies</a>
+            </div>
+          </div>
+          </div>
+          <a href="/" class="home-link">
+            <h1>OutDoor Cinema</h1>
+          </a>
+            <nav class="topnav">
+                <ul>
+                    <li class = "centered-item"><span class="hide" >
+                      <i class="fa-solid fa-ticket"></i><br>
+                      </span>
+                      <a class = "booking-ticket" href="/book.html" >Book Now</a></li>
+                    
+                    
+                    <li class = "centered-item">
+                    <span  class = hide>
+                        <i class="fa-solid fa-user"></i><br>
+                    </span>
+                    <a href="/login.html" >Login/join</a>
+                
+                    </li>
+                    
+                    <li class = "centered-item">
+                        <span class =hide><i class="fa-solid fa-clapperboard"></i><br>
+                        </span>
+                        <a href="/top3.html" >Top 3 Movies</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+   
+    <section class="box1-book">
+        <section class="title1-pets">
+          <i class="fa-solid fa-ticket"></i>
+          <h2>Movies Under the Stars<br>BOOK ON WEBTICKETS</h2>
+
+        </section>
+		<div class="logo-container">
+			<a href="https://www.webtickets.co.za/v2/FAQ.aspx?itemid=1499376892" class="home-link">
+				<img src="images/logo.png" alt="Logo" class="logo">
+			  </a>
+		  </div>
+        
+      </section>
+  
+    
+<footer>
+  
+  <div class="links-container">
+    <h3>Useful Links</h3> <!-- Added heading for the links section -->
+    <span class="links">
+      <a href="/contact.html">Contact us</a>
+      <a href="/about.html">About us</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/petspolicy.html">Dog Policy</a>
+    </span>
+  </div>
+  <div class="socials-container">
+    <h3>Follow Us</h3>
+    <span class="socials">
+      <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+    </span>
+  </div>
+  <p>&copy; 2024 OutDoor Cinema</p>
+</footer>
+
+    
+   
 </body>
+
 </html>

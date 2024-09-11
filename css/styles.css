@@ -28,7 +28,7 @@ body {
 }
 
 header {
-  background-color: #212121;
+  
   padding: 10px 20px; /* Adjust padding as needed */
 }
 
@@ -40,7 +40,7 @@ header {
   font-family: "Bebas Neue",sans-serif;
   align-items: center; /* Vertically center the items */
   justify-content: space-between; /* Space between title and nav */
-  background-color: rgba(0, 0, 0, 0.09); /* Fully transparent background */
+  background-color: rgba(0, 0, 0, 0.1); /* Fully transparent background */
   padding: 10px; /* Adjust padding as needed */
  z-index: 1000;
   
@@ -941,4 +941,40 @@ footer {
         padding: 10px;
     }
 }
+}
+
+/* Style for the logo container to center the image */
+.logo-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  margin-top: 20px; /* Space above the logo */
+}
+
+/* Style for the logo image */
+.logo {
+  max-width: 100%; /* Ensure logo is responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+.box1-book {
+  padding: 40px 20px; /* Add padding to give space inside the section */
+  margin-bottom: 50px; /* Add margin-bottom to push content down */
+  
+}
+
+/* Make sure the logo is centered */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 250px;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* Push the footer to the bottom if there's not enough content */
+.content {
+  flex: 1; /* Allows the content section to grow and push the footer down */
 }
