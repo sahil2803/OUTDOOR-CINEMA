@@ -35,7 +35,7 @@
                         <span class="hide">
                             <i class="fa-solid fa-user"></i><br>
                         </span>
-                        <a href="/login.html">Login/join</a>
+                        <a href="#" id="formShow">Login/join</a>
                     </li>
                     
                     <li class="centered-item">
@@ -303,7 +303,80 @@
   <p>&copy; 2024 OutDoor Cinema</p>
 </footer>
 
+     <!--                       logIn form                            -->
+  <div id="form" class="container" style="display: none;">
+    <div class="form-box">
+      <h1 id="title">Sign Up</h1>
+      <form>
+        <div class="input">
+          <div class="inputFeild" id="name">
+            <icon></icon>
+            <input type="text" name="name" placeholder="User Name">
+          </div>
+
+          <div class="inputFeild" >
+            <icon></icon>
+            <input type="email" name="email" placeholder="example@something.another">
+          </div>
+
+          <div class="inputFeild">
+            <icon></icon>
+            <input type="password" name="password" placeholder="Password">
+          </div>
+          <p>Forgot password?<br><a href="#">Click Here</a></p>
+        </div>
+        <div class="buttons">
+          <button type="button" id="signupbtn">Sign Up</button>
+          <button type="Button" id="signinbtn">Log In</button>
+        </div>
+      </form>
+    </div>
+  </div>
+	
+  <script>
+
+  /*variable declarations all in one place*/
+    let signup = document.getElementById("signupbtn");
+    let signin = document.getElementById("signinbtn");
+    let name = document.getElementById("name");
+    let title = document.getElementById("title");
+    let formShowbtn = document.getElementById("formShow");
+
+  /*these just control the seemingly disabled buttons*/
+    signin.onclick = function(){
+      name.style.maxHeight = 0;
+      title.innerHTML="Sign In";
+      signup.classList.add("disabled");
+      signin.classList.remove("disabled");
+    }
+
+    signup.onclick = function(){
+      name.style.maxHeight = 0;
+      title.innerHTML="Sign Up";
+      signup.classList.remove("disabled");
+      signin.classList.add("disabled");
+    }
+
+  /*
+  this will show or hide the form from the screen
+  blur the background page
+  set the focu to the form block
+
+  */
+    formShowbtn.addEventListener('click', function(){
+    const form = document.getElementById("form");
+    if (form.style.display==='none'){
+      form.style.display ='block';
+      }else{
+        form.style.display='none'
+    }
+    document.style.filter  = 'blur(2px)';
+    document.getElementById('form').style.filter = 'none';
+    document.getElementById('form').focus;
     
+    });
+    
+  </script>   
    
 </body>
 
