@@ -1,102 +1,307 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>OutDoor Cinema</title>
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="style.css"/> 
+    <meta charset="utf-8">
+    <title>OutDoor Cinema</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/PopUp.css">
+    <link rel="stylesheet" type="text/css" href="/css/Leaderboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+    <script src="/js/Popup.js"></script>
+    <script src="/js/sketch.js"></script>
 </head>
-<body style="background-color: #212121; color: #ffffff;">
-  <header>
-      <h1>OutDoor Cinema</h1>
-  </header>
-  
-  <nav style="background-color: #212121;">
-    <ul>
-      <li><a href="/index.html" style="color: #6F9CEB;">Home</a></li>
-      <li><a href="/book.html" style="color: #FF331F;">Book Now</a></li>
-      <li><a href="/about.html" style="color: #6F9CEB;">About us</a></li>
-      <li><a href="/login.html" style="color: #6F9CEB;">Login</a></li>
-      <li><a href="/signup.html" style="color: #6F9CEB;">Signup</a></li>
-      <li><a href="/top3.html" style="color: #6F9CEB;">Top 3 Movie</a></li>
-      <button id="formShow">ShowFormm</button>
-    </ul>
-  </nav>
+<body>
+    <header>
+        <div class="header-container">
+            <button class="hamburger" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
+            <h1>OutDoor Cinema</h1>
+            <nav class="topnav">
+                <ul>
+                    <li class="centered-item">
+                        <span class="hide">
+                            <i class="fa-solid fa-ticket"></i><br>
+                        </span>
+                        <a class="booking-ticket" href="/book.html">Book Now</a>
+                    </li>
+                    
+                    <li class="centered-item">
+                        <span class="hide">
+                            <i class="fa-solid fa-user"></i><br>
+                        </span>
+                        <a href="/login.html">Login/join</a>
+                    </li>
+                    
+                    <li class="centered-item">
+                        <span class="hide">
+                            <i class="fa-solid fa-clapperboard"></i><br>
+                        </span>
+                        <a href="#" id="top3Link">Top 3 Movies</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <section>
-    <p>the ultimate outdoor cinema experience! "Screening Excellence, Impacting Community" is more than just a motto - it's our promise to deliver top-notch entertainment while making a positive impact in our neighborhood. Our team of dedicated professionals is passionate about bringing people together through the magic of movies, and we strive to provide excellent services that exceed your expectations. Join us for a unique and unforgettable experience under the stars!
+    <!-- Pop-up content -->
+    <div id="popup" class="popup .taglines">
+        <div class="leaderboard-container">
+          <h2 style="margin: 10px;">TOP 3 Movies</h2>
+          <div class="leaderboard">
+              <div class="rank-card second">
+                  <img src="images/deadpoo.jpg" alt="Li Fang" class="profile-pic">
+                  <p style="font-size: 12px;">DEADPOOL AND WOLVERINE</p>
+                  <p class="stars">⭐ 52 Votes</p>
+                  <div class="rank">2</div>
+              </div>
 
-    </p>
-    <hr>
-  <h2>Movie Lineup</h2>
-  <table style="width:100%">
-      <tr>
-      <th style="padding: 8px; width:50%"><h3>Port Alfred</h3></th>
-      <th style="padding: 8px; width:50%"><h3>Grahamstown</h3></th>
-      </tr>
-      <tr>
-      <td><img src="images/deadpoo.jpg" alt="Deadpool" style="width:50%; float:left;">
-      <img src="images/HO00002989.jpg" alt="movie2" style="width:50%; float:left;"></td>
-      <td><img src="images/HO00003131.jpg" alt="movie3" style="width:50%; float:right;">
-          <img src="images/HO000303086.jpg" alt="Italian Trulli" style="width:50%; float:right;">
-      </td>
-      </tr>
-        
-</table>
-    <hr>
-    <h2>Vote</h2>
+              <div class="rank-card first">
+                  <img src="images/HO00003131.jpg" alt="Stephen Chen" class="profile-pic">
+                  <p style="font-size: 15px;">ALIEN ROMULUS</p>
 
-    <table style="width:100%">
-      <tr>
-      <td><img src="images/deadpoo.jpg" alt="Deadpool" style="width:50%; float:left;">
-      <img src="images/HO00002989.jpg" alt="movie2" style="width:50%; float:left;"></td>
-      <td><img src="images/HO00003131.jpg" alt="movie3" style="width:50%; float:right;">
-          <img src="images/HO000303086.jpg" alt="Italian Trulli" style="width:50%; float:right;">
-      </td>
-      </tr>
-      
-</table>
-  <hr>
-  <section>
-    <h2>Food</h2>
-    <table style="float: left; margin-right: 20px;background-color: #333333;">
-      <tr >
-        <th>Item</th>
-        <th>Price</th>
-      </tr>
-      <tr>
-        <td>Popcorn</td>
-        <td>R20</td>
-      </tr>
-      <tr>
-        <td>Coca-Cola</td>
-        <td>R15</td>
-      </tr>
-    </table>
+                  <p class="stars">🏆 70 Votes</p>
+                  <div class="rank">1</div>
+              </div>
+              <div class="rank-card third">
+                  <img src="images/HO00002989.jpg" alt="Janson" class="profile-pic">
+                  <p style="font-size: 12px;">INSIDE OUT 2</p>
+                  <p class="stars">⭐ 42 Votes</p>
+                  <div class="rank">3</div>
+              </div>
+              <span id="closePopup" class="close">&times;</span>
+          </div>
+      </div>
+    </div>
 
-    <table style="float: left;background-color: #333333;">
-      <tr>
-        <th>Item</th>
-        <th>Price</th>
-      </tr>
-      <tr>
-        <td>Popcorn</td>
-        <td>R20</td>
-      </tr>
-      <tr>
-        <td>Coca-Cola</td>
-        <td>R15</td>
-      </tr>
-    </table>
-    <br style="clear: both;">
-  </section>
-  <hr>
     
-  <hr>
 
-  <h3>Reviews</h3>
-  <p>We love the movies</p>
-  <hr>
+    <script src="/js/Popup.js"></script>
+
+    <section class = "box1">
+        <section class = "title1">
+        <p>Transform your movie nights into magical evenings with us <br>where every film is a grand adventure beneath the open sky. <br>
+            Our outdoor cinema combines the best of cinematic wonder with the charm of nature,<br> offering you an unforgettable experience.</p>
+          </section>
+          <div class="taglines">
+            <div class="tagline-item">
+              <h2>Family-Friendly Atmosphere</h2>
+              <div class="tagdescription">
+                <p> Ample parking, our outdoor cinema is easily accessible for everyone.</p>
+                <p>pet-friendly policies.</p>
+                <p>Join us for special screenings for an added touch of excitement!</p>
+              </div>
+            </div>
+          
+            <div class="tagline-item">
+              <h2>Latest Movies</h2>
+              <div class="tagdescription">
+                <p>Watch the latest blockbuster hits under the stars.</p>
+                <p>Enjoy a wide variety of genres, including action, romance, and family-friendly options.</p>
+                <p>Check our schedule for upcoming releases and special screenings.</p>
+              </div>
+            </div>
+          
+            <div class="tagline-item">
+              <h2>Unique Experience</h2>
+              <div class="tagdescription">
+                <p>Experience cinema like never before with outdoor screenings in a picturesque setting.</p>
+                <p>Comfortable seating options.</p>
+                <p>Enjoy movie nights with a a wide range of snacks.</p>
+              </div>
+            </div>
+          </div>
+          
+
+    </section>
+    
+    <section class="box2">
+        <h1 class="sections">MOVIE LINEUP</h1>
+        <div class="image-container">
+            <div class="image-wrapper">
+              <img src="images/deadpoo.jpg" alt="movie1">
+              <div class="overlay">DEADPOOL & WOLVERINE</div>
+            </div>
+            <div class="image-wrapper">
+              <img src="images/HO00002989.jpg" alt="movie2">
+              <div class="overlay">INSIDE OUT 2</div>
+            </div>
+            <div class="image-wrapper">
+              <img src="images/HO00003131.jpg" alt="movie3">
+              <div class="overlay">ALIEN ROMULUS</div>
+            </div>
+            <div class="image-wrapper">
+              <img src="images/HO000303086.jpg" alt="movie4">
+              <div class="overlay">A QUIET PLACE DAY ONE</div>
+            </div>
+          </div>
+    </section>
+
+    <section>
+      <h1 class="sections">MOVIE VOTING</h1>
+      <div class="image-container">
+          <div class="image-wrapper">
+            <img src="images/deadpoo.jpg" alt="movie1">
+            <div class="overlay">
+              <div class="overlay-content">
+                <h3 class="overlay-header">DEADPOOL & WOLVERINE</h3>
+                <p>Vote</p>
+                <button class="vote-btn">Click to Vote</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="image-wrapper">
+            <img src="images/HO00002989.jpg" alt="movie2">
+            <div class="overlay">
+              <div class="overlay-content">
+                <h3 class="overlay-header">INSIDE OUT 2</h3>
+                <p>Vote</p>
+                <button class="vote-btn">Click to Vote</button>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="image-wrapper">
+            <img src="images/HO00003131.jpg" alt="movie3">
+            <div class="overlay">
+              <div class="overlay-content">
+                <h3 class="overlay-header">ALIEN ROMULUS</h3>
+                <p>Vote</p>
+                <button class="vote-btn">Click to Vote</button>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="image-wrapper">
+            <img src="images/HO000303086.jpg" alt="movie4">
+            <div class="overlay">
+              <div class="overlay-content">
+                <h3 class="overlay-header">A QUIET PLACE DAY ONE</h3>
+                <p>Vote</p>
+                <button class="vote-btn">Click to Vote</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class ="box4">
+        <h1 class  = "sections">FOOD</h1>
+        <span class ="table">
+          
+        <table class = "frosted-table">
+          <caption class="table-title" style="caption-side:top">SAVOURY SNACK</caption>
+
+      
+
+          <tr >
+            <th>Item</th>
+            <th>Price</th>
+          </tr>
+          <tr>
+            <td>Popcorn</td>
+            <td>R20</td>
+          </tr>
+          <tr>
+            <td>Coca-Cola</td>
+            <td>R15</td>
+          </tr>
+        </table>
+      
+    
+        <table class = frosted-table style="float: left;">
+          <caption class="table-title"style="caption-side:top">SWEET TREATS</caption>
+          <tr>
+            <th>Item</th>
+            <th>Price</th>
+          </tr>
+          <tr>
+            <td>Popcorn</td>
+            <td>R20</td>
+          </tr>
+          <tr>
+            <td>Coca-Cola</td>
+            <td>R15</td>
+          </tr>
+        </table>
+
+        <table class = frosted-table style="float: left;">
+          <caption class="table-title"style="caption-side:top">DRINKS</caption>
+          <tr>
+            <th>Item</th>
+            <th>Price</th>
+          </tr>
+          <tr>
+            <td>Popcorn</td>
+            <td>R20</td>
+          </tr>
+          <tr>
+            <td>Coca-Cola</td>
+            <td>R15</td>
+          </tr>
+        </table>
+
+         <table  class = frosted-table style="float: left;">
+          <caption class="table-title"style="caption-side:top">GOURMET SNACKS</caption>
+          <tr>
+            <th>Item</th>
+            <th>Price</th>
+          </tr>
+          <tr>
+            <td>Popcorn</td>
+            <td>R20</td>
+          </tr>
+          <tr>
+            <td>Coca-Cola</td>
+            <td>R15</td>
+          </tr>
+        </table>
+      </span>
+        <br style="clear: both;">
+      </section>
+      <hr>
+     <section class = "box5">
+
+      <h1 class  = "sections">REVIEWS</h1>
+      <p style="text-align: center;">It was nice </p>
+      <p>1111</p><br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      
+     </section>
+<hr>
+    
+<footer>
+  
+  <div class="links-container">
+    <h3>Useful Links</h3> <!-- Added heading for the links section -->
+    <span class="links">
+      <a href="/contact.html">Contact us</a>
+      <a href="/about.html">About us</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/dog-policy.html">Dog Policy</a>
+    </span>
+  </div>
+  <div class="socials-container">
+    <h3>Follow Us</h3>
+    <span class="socials">
+      <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+    </span>
+  </div>
+  <p>&copy; 2024 OutDoor Cinema</p>
+</footer>
 
 
     <!--                       logIn form                            -->
@@ -128,19 +333,7 @@
       </form>
     </div>
   </div>
-
-  <footer>
-  <p>&copy; 2024 OutDoor Cinema</p>
-  <div align="right">
-    <a href="/contact.html" style="color: #6F9CEB;">Contact us</a>
-    <a href="/about.html" style="color: #6F9CEB;">About us</a>
-    <a>privacy policy</a>
-    <a href="https://www.instagram.com/" style="color: white;">Instagram</a> |
-    <a href="https://www.facebook.com/" style="color: white;">Facebook</a>
-  </div>
-
-
-	</footer>
+	
   <script>
 
   /*variable declarations all in one place*/
