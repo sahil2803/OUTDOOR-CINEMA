@@ -19,7 +19,7 @@
 </head>
 <body>
     <header>
-        <div class="header-container">
+        <div class="header-container" >
             <button class="hamburger" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
             <h1>OutDoor Cinema</h1>
             <nav class="topnav">
@@ -302,7 +302,7 @@
   </div>
   <p>&copy; 2024 OutDoor Cinema</p>
 </footer>
-
+</body>
      <!--                       logIn form                            -->
   <div id="form" class="container" style="display: none;">
     <div class="form-box">
@@ -327,7 +327,7 @@
         </div>
         <div class="buttons">
           <button type="button" id="signupbtn">Sign Up</button>
-          <button type="Button" id="signinbtn">Log In</button>
+          <button type="Button" id="logIn">Log In</button>
         </div>
       </form>
     </div>
@@ -337,7 +337,7 @@
 
   /*variable declarations all in one place*/
     let signup = document.getElementById("signupbtn");
-    let signin = document.getElementById("signinbtn");
+    let signin = document.getElementById("LogIn");
     let name = document.getElementById("name");
     let title = document.getElementById("title");
     let formShowbtn = document.getElementById("formShow");
@@ -361,23 +361,31 @@
   this will show or hide the form from the screen
   blur the background page
   set the focu to the form block
-
   */
+
+ /*
+ code to blur everything except the login/signup form
+ code is written in this manner to make it easier to modify should there be anything that goes wrong
+ */
+  function body_blur(bleh){
+	  if (bleh){
+	      document.body.classlist.add("blur_body");
+	else{
+	      document.body.classlist.remove("blur_body");
+	  }
+  }//blur_body function
+	  
     formShowbtn.addEventListener('click', function(){
     const form = document.getElementById("form");
     if (form.style.display==='none'){
       form.style.display ='block';
-      }else{
-        form.style.display='none'
+      body_blur(true);
+    }else{
+      form.style.display='none'
+      boduy_blur(false);
     }
-    document.style.filter  = 'blur(2px)';
-    document.getElementById('form').style.filter = 'none';
-    document.getElementById('form').focus;
     
     });
     
   </script>   
-   
-</body>
-
 </html>
