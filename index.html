@@ -5,6 +5,7 @@
     <title>OutDoor Cinema</title>
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
     <link rel="stylesheet" type="text/css" href="/css/PopUp.css">
+    <link rel="stylesheet" type="text/css" href="/css/SignUp.css">
     <link rel="stylesheet" type="text/css" href="/css/Leaderboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,12 +15,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
-    <script src="/js/Popup.js"></script>
-    <script src="/js/sketch.js"></script>
+    <script  type = "text/javascript" src="/js/Popup.js"></script>
+    <script  type = "text/javascript" src="/js/sketch.js"></script>
 </head>
 <body>
     <header>
-        <div class="header-container" >
+        <div class="header-container">
             <button class="hamburger" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
             <h1>OutDoor Cinema</h1>
             <nav class="topnav">
@@ -35,7 +36,7 @@
                         <span class="hide">
                             <i class="fa-solid fa-user"></i><br>
                         </span>
-                        <a href="#" id="formShow">Login/join</a>
+                        <a href="#" id="formShow" onclick="show('wrap')">Login/join</a>
                     </li>
                     
                     <li class="centered-item">
@@ -46,6 +47,7 @@
                     </li>
                 </ul>
             </nav>
+            
         </div>
     </header>
 
@@ -302,90 +304,80 @@
   </div>
   <p>&copy; 2024 OutDoor Cinema</p>
 </footer>
-</body>
-     <!--                       logIn form                            -->
-  <div id="form" class="container" style="display: none;">
-    <div class="form-box">
-      <h1 id="title">Sign Up</h1>
-      <form>
-        <div class="input">
-          <div class="inputFeild" id="name">
-            <icon></icon>
-            <input type="text" name="name" placeholder="User Name">
-          </div>
 
-          <div class="inputFeild" >
-            <icon></icon>
-            <input type="email" name="email" placeholder="example@something.another">
-          </div>
-
-          <div class="inputFeild">
-            <icon></icon>
-            <input type="password" name="password" placeholder="Password">
-          </div>
-          <p>Forgot password?<br><a href="#">Click Here</a></p>
+    <!--                       logIn form                            -->
+  <div class="wrapper" id="wrap" style="display: none;">
+    <div class="form-box login" id="log" style="display: none;">
+      <h2>Log In</h2>
+      <form action="#">
+        <!--email address -->
+        <div class="input-box">
+          <span class="icon">
+            <i class="fa-solid fa-envelope"></i>
+          </span>
+          <input type="text" id="email" name="email" required>
+          <label for="email">email</label>
         </div>
-        <div class="buttons">
-          <button type="button" id="signupbtn">Sign Up</button>
-          <button type="Button" id="logIn">Log In</button>
+        <!-- password -->
+        <div class="input-box">
+          <span class="icon">
+            <i class="fa-solid fa-lock"></i> 
+          </span>
+          <input type="text" id="password" name="password" required>
+          <label for="password">password</label>
+        </div>
+        <!--forgot password-->
+        <div class="remember-password">
+          <a href="#">Forgot Password?</a>
+        </div>
+        <button type="submit" class="btn">Log In</button>
+        <div class="signup">
+          <p>Don't have an account?<br><a href="#" class="registerLink"onclick="register()">Register</a> </p>
         </div>
       </form>
-    </div>
+    </div><!--this is the end of the login form -->
+
+    <div class="form-box register" id="reg">
+      <h2>Register</h2>
+      <form action="#">
+        <!--user name -->
+        <div class="input-box">
+          <span class="icon">
+            <i class="fa-solid fa-user"></i>
+          </span>
+          <input type="text" id="username" name="username" required>
+          <label for="username">user name</label>
+        </div>
+        <!--email address-->
+        <div class="input-box">
+          <span class="icon">
+            <i class="fa-solid fa-envelope"></i>
+          </span>
+          <input type="text" id="email" name="email" required>
+          <label for="email">email</label>
+        </div>
+        <!-- password-->
+        <div class="input-box">
+          <span class="icon">
+            <i class="fa-solid fa-lock"></i> 
+          </span>
+          <input type="password" id="password" name="password" required>
+          <label for="password">password</label>
+        </div>
+        <!--forgot password-->
+        <div class="remember-password">
+          <a href="#">Forgot Password?</a>
+        </div>
+        <button type="submit" class="btn">Register</button>
+        <div class="signup">
+          <p>Already have an account?<br><a href="#" class="logInLink" onclick="login()">Login</a> </p>
+        </div>
+      </form>
+    </div><!--this is the end of the registration form -->
+
   </div>
-	
-  <script>
 
-  /*variable declarations all in one place*/
-    let signup = document.getElementById("signupbtn");
-    let signin = document.getElementById("LogIn");
-    let name = document.getElementById("name");
-    let title = document.getElementById("title");
-    let formShowbtn = document.getElementById("formShow");
+  <script src="\js\Popup.js"></script>   
+</body>
 
-  /*these just control the seemingly disabled buttons*/
-    signin.onclick = function(){
-      name.style.maxHeight = 0;
-      title.innerHTML="Sign In";
-      signup.classList.add("disabled");
-      signin.classList.remove("disabled");
-    }
-
-    signup.onclick = function(){
-      name.style.maxHeight = 0;
-      title.innerHTML="Sign Up";
-      signup.classList.remove("disabled");
-      signin.classList.add("disabled");
-    }
-
-  /*
-  this will show or hide the form from the screen
-  blur the background page
-  set the focu to the form block
-  */
-
- /*
- code to blur everything except the login/signup form
- code is written in this manner to make it easier to modify should there be anything that goes wrong
- */
-  function body_blur(bleh){
-	  if (bleh){
-	      document.body.classlist.add("blur_body");
-	else{
-	      document.body.classlist.remove("blur_body");
-	  }
-  }//blur_body function
-	  
-    formShowbtn.addEventListener('click', function(){
-    const form = document.getElementById("form");
-    if (form.style.display==='none'){
-      form.style.display ='block';
-      body_blur(true);
-    }else{
-      form.style.display='none'
-      boduy_blur(false);
-    }
-    
-    });
-    
-  </script>   
 </html>
