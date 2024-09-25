@@ -510,8 +510,17 @@ a{
 
 
 
-
-
+/* Number class */
+.number {
+  position: absolute;
+  bottom: 10px; /* Adjust position */
+  left: 1px; /* Adjust position */
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 50%;
+  font-size: 40px;
+}
 
 
 
