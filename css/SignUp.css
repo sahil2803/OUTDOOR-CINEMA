@@ -1,48 +1,153 @@
-body {
-    font-family: Arial, sans-serif;
-    transition: filter 0.3s ease;
-}
-
-.centered-item {
-    font-size: 18px;
-    color: #007BFF;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-#top3Link {
-    color: #007BFF;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-#popup {
-    display: none; /* Initially hidden */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+.wrapper{
+    position: relative;
+    width: 400px;
+    height: auto;
+    background: transparent;
+    border: 2px solid rgb(255,255 ,255);
+    border-radius: 25px;
+    backdrop-filter: blur(25px);
+    box-shadow: 0 0 30px rgb(0,0,0, 0.5) ;
+    display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    margin: auto;
+    top:50%;
+    box-sizing: border-box;
+    z-index: 10001;
 }
 
-.popup-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+.wrapper .form-box{
     position: relative;
+    width: 100%;
+    height: 100%;
+    padding:30px;
+    justify-content: center;
     text-align: center;
+    box-sizing: border-box;
 }
 
-.close {
+.form-box h2{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.input-box{
+    position: relative;
+    width:100%;
+    height: 55px;
+    border-bottom: 2px solid #d3deed ;
+    margin: 40px 0;
+    margin-top: 1.5;
+}
+.input-box label {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    cursor: pointer;
+    top: 50%;
+    left: 1px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #566f91;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .7s ease;
+}
+.input-box input{
+    margin-left: 0;
+    padding-left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: transparent;
+    color: #d3deed;
+    font-size: 19px;
+    border: none;
+    outline: none;
+    margin: 0;
 }
 
+.input-box .icon{
+    position: absolute;
+    right: 12px;
+    font-size: 14px;
+    line-height: 57px;
+
+}
+/* 
+this is for the motion of the labels to move uip when one clicks to ad the text
+*/
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+
+
+/* 
+this is for all the elements below the input boxes
+*/
+.remember-password{
+    margin: 10px;
+    padding-top: 0;
+}
+.remember-password a{
+    text-align: center;
+    font-size: 18px;
+    text-decoration: none;
+    color: #566f91;
+    transition: .65s ease;
+}
+.remember-password a:hover{
+    font-size: 145%;
+    text-decoration: underline;
+}
+
+/*
+this is for the login button
+*/
+.btn{
+    width: 100%;
+    height: 100%;
+    background-color: #566f91;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    font-size: 20px;
+    padding: 8px;
+    color: white;
+    cursor: pointer;
+    transition: 0.7s ease;
+}
+.btn:hover{
+    font-size: 145%;
+    padding: 10px;
+    border-radius: 16px;
+}
+
+/*
+this is for the last element in the login form 
+*/
+.signup{
+    font-size: 18px;
+    text-align: center;
+    margin: 10px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.signup a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    transition: 0.6s ease;
+}
+.signup a:hover{
+    text-decoration: underline;
+    color: #747474;
+    font-size: 110%;
+    font-weight: 500;
+}
