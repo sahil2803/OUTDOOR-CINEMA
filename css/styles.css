@@ -245,9 +245,8 @@ a{
   align-items: center; /* Center content vertically */
   flex-direction: column; /* Arrange items in a column */
   box-sizing: border-box; /* Include padding and border in width/height calculations */
-
-  
 }
+
 .box1{
   z-index: 1; /* Ensure it's beneath the header */
   margin-top: -100px; /* Adjust based on your layout to overlap the header */
@@ -523,19 +522,6 @@ a{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .image-container {
   padding-top: 5rem;
   display: flex;
@@ -550,6 +536,7 @@ a{
   margin: 0 auto;
   
 }
+
 .box4, .box3 {
   padding-top: 10rem; /* Default padding for larger screens */
   box-sizing: border-box; /* Include padding and border in width/height calculations */
