@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Carousel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="carousel-container">
+    <div class="carousel">
+      <div class="movie-item">
+        <img src="images/deadpoo.jpg" alt="Deadpool">
+        <p>Deadpool</p>
+      </div>
+      <div class="movie-item">
+        <img src="images/TheForge.jpg" alt="Wolverine">
+        <p>Wolverine</p>
+      </div>
+      <div class="movie-item">
+        <img src="images/HO000303086.jpg" alt="Avatar">
+        <p>Avatar</p>
+      </div>
+      <!-- Add more movie items here -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+<style>
+    /* Carousel Container */
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 20px;
+}
+
+/* Carousel */
+.carousel {
+  display: flex;
+  transition: transform 0.3s ease;
+  cursor: grab;
+}
+
+/* Movie Item */
+.movie-item {
+  min-width: 200px;
+  margin-right: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.movie-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.movie-item p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #fff;
+}
+
+/* Add some hover effect */
+.movie-item:hover {
+  transform: scale(1.05);
+}
+
+body {
+  background-color: #141414;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+
+</style>
+
+<script>
+    // Select the carousel
+const carousel = document.querySelector('.carousel');
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+// Mouse down event for dragging
+carousel.addEventListener('mousedown', (e) => {
+  isDown = true;
+  carousel.classList.add('active');
+  startX = e.pageX - carousel.offsetLeft;
+  scrollLeft = carousel.scrollLeft;
+});
+
+// Mouse leave event
+carousel.addEventListener('mouseleave', () => {
+  isDown = false;
+  carousel.classList.remove('active');
+});
+
+// Mouse up event
+carousel.addEventListener('mouseup', () => {
+  isDown = false;
+  carousel.classList.remove('active');
+});
+
+// Mouse move event for swiping
+carousel.addEventListener('mousemove', (e) => {
+  if (!isDown) return;  // Stop function if the mouse is not pressed
+  e.preventDefault();
+  const x = e.pageX - carousel.offsetLeft;
+  const walk = (x - startX) * 2; // Multiply by 2 to swipe faster
+  carousel.scrollLeft = scrollLeft - walk;
+});
+
+// Add touch support for mobile devices
+carousel.addEventListener('touchstart', (e) => {
+  isDown = true;
+  startX = e.touches[0].pageX - carousel.offsetLeft;
+  scrollLeft = carousel.scrollLeft;
+});
+
+carousel.addEventListener('touchend', () => {
+  isDown = false;
+});
+
+carousel.addEventListener('touchmove', (e) => {
+  if (!isDown) return;
+  const x = e.touches[0].pageX - carousel.offsetLeft;
+  const walk = (x - startX) * 2;
+  carousel.scrollLeft = scrollLeft - walk;
+});
+
+</script>

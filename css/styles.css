@@ -94,6 +94,16 @@ a{
  transition: fill 0.3s ease; /* Smooth transition for icon color */
 }
 
+.privacy_container {
+  z-index: 1; /* Ensure it's beneath the header */
+  margin-top: -100px; 
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  padding-top: 100px;
+  overflow: scroll;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
 .hide{
   position: absolute; /* Remove the icon from the document flow */
@@ -261,9 +271,8 @@ a{
   align-items: center; /* Center content vertically */
   flex-direction: column; /* Arrange items in a column */
   box-sizing: border-box; /* Include padding and border in width/height calculations */
-
-  
 }
+
 .box1{
   z-index: 1; /* Ensure it's beneath the header */
   margin-top: -100px; /* Adjust based on your layout to overlap the header */
@@ -522,21 +531,17 @@ a{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Number class */
+.number {
+  position: absolute;
+  bottom: 10px; /* Adjust position */
+  left: 1px; /* Adjust position */
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 50%;
+  font-size: 40px;
+}
 
 
 .image-container {
@@ -553,6 +558,7 @@ a{
   margin: 0 auto;
   
 }
+
 .box4, .box3 {
   padding-top: 10rem; /* Default padding for larger screens */
   box-sizing: border-box; /* Include padding and border in width/height calculations */

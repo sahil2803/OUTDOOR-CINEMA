@@ -4,8 +4,10 @@
     <meta charset="utf-8">
     <title>OutDoor Cinema</title>
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
-    <link rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/PopUp.css">
+    <link rel="stylesheet" type="text/css" href="/css/SignUp.css">
+    <link rel="stylesheet" type="text/css" href="/css/Leaderboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -16,11 +18,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script> -->
-    <!-- <script src="/js/sketch.js"></script> -->
-   
-
-
+    <script  type = "text/javascript" src="/js/Popup.js"></script>
+    <script  type = "text/javascript" src="/js/sketch.js"></script>
 </head>
 <body >
     <header id="header">
@@ -50,12 +49,11 @@
                       <a class = "booking-ticket" href="/book.html" >Book Now</a></li>
                     
                     
-                    <li class = "centered-item">
-                    <span  class = hide>
-                        <i class="fa-solid fa-user"></i><br>
-                    </span>
-                    <a href="#" id="logIn" >Login/join</a>
-                
+                    <li class="centered-item">
+                        <span class="hide">
+                            <i class="fa-solid fa-user"></i><br>
+                        </span>
+                        <a href="#" id="formShow" onclick="show('wrap')">Login/join</a>
                     </li>
                     
                     <li class = "centered-item">
@@ -64,8 +62,15 @@
                         <a href="/top3.html" >Top 3 Movies</a></li>
                 </ul>
             </nav>
+            
         </div>
     </header>
+    
+
+    
+
+    <script src="/js/Popup.js"></script>
+
     <section class = "box1">
         <section class = "title1">
           <i class="fa-solid fa-video"></i>
@@ -126,47 +131,72 @@
           </div>
     </section>
 
-    <section class = "box3">
-        <h1 class="sections">MOVIE VOTING?</h1>
-        <div class="image-container">
-            <div class="image-wrapper">
-              <img src="images/deadpoo.jpg" alt="movie1">
-              <div class="overlay">DEADPOOL & WOLVERINE</div>
-            </div>
-            <div class="image-wrapper">
-              <img src="images/HO00002989.jpg" alt="movie2">
-              <div class="overlay">INSIDE OUT 2</div>
-            </div>
-            <div class="image-wrapper">
-              <img src="images/HO00003131.jpg" alt="movie3">
-              <div class="overlay">ALIEN ROMULUS</div>
-            </div>
-            <div class="image-wrapper">
-              <img src="images/HO00002926.jpg" alt="movie4">
-              <div class="overlay">IT ENDS WITH US</div>
-            </div>
+    <!-- Vote and Top 3 -->
+    
 
-            <div class="image-wrapper">
-              <img src="images/deadpoo.jpg" alt="movie1">
-              <div class="overlay">DEADPOOL & WOLVERINE</div>
+    <section>
+      <h1 class="sections">Trending Movies</h1>
+      <div class="image-container">
+          <div class="image-wrapper">
+            <img src="images/deadpoo.jpg" alt="movie1">
+            <div class = "number">1</div>
+            <div class="overlay">
+              <div class="overlay-content">
+                <h3 class="overlay-header">DEADPOOL & WOLVERINE</h3>
+                <p>Vote</p>
+                <button class="vote-btn">Click to Vote</button>
+              </div>
             </div>
-
-            <div class="image-wrapper">
-              <img src="images/deadpoo.jpg" alt="movie1">
-              <div class="overlay">DEADPOOL & WOLVERINE</div>
-            </div>
-
-            <div class="image-wrapper">
-              <img src="images/deadpoo.jpg" alt="movie1">
-              <div class="overlay">DEADPOOL & WOLVERINE</div>
-            </div>
-
-            <div class="image-wrapper">
-              <img src="images/deadpoo.jpg" alt="movie1">
-              <div class="overlay">DEADPOOL & WOLVERINE</div>
-            </div>
-
           </div>
+          
+          <div class="image-wrapper">
+            <img src="images/HO00002989.jpg" alt="movie2">
+            <div class = "number">2</div>
+            <div class="overlay">
+              <div class="overlay-content">
+                <h3 class="overlay-header">INSIDE OUT 2</h3>
+                <p>Vote</p>
+                <button class="vote-btn">Click to Vote</button>
+              </div>
+            </div>
+
+          <div class="image-wrapper">
+            <img src="images/HO00003131.jpg" alt="movie3">
+            <div class = "number">3</div>
+            <div class="overlay">
+              <div class="overlay-content">
+                <h3 class="overlay-header">ALIEN ROMULUS</h3>
+                <p>Vote</p>
+                <button class="vote-btn">Click to Vote</button>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="image-wrapper">
+            <img src="images/HO000303086.jpg" alt="movie4">
+            <div class = "number">4</div>
+            <div class="overlay">
+              <div class="overlay-content">
+                <h3 class="overlay-header">A QUIET PLACE DAY ONE</h3>
+                <p>Vote</p>
+                <button class="vote-btn">Click to Vote</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="image-wrapper">
+            <img src="images/TheForge.jpg" alt="movie5">
+            <div class = "number">5</div>
+            <div class="overlay">
+              <div class="overlay-content">
+                <h3 class="overlay-header">The Forge</h3>
+                <p>Vote</p>
+                <button class="vote-btn">Click to Vote</button>
+              </div>
+            </div>
+          </div>
+        </div>
     </section>
 
     <section class ="box4">
@@ -264,9 +294,9 @@
     <h3>Useful Links</h3> <!-- Added heading for the links section -->
     <span class="links">
       <a href="/contact.html">Contact us</a>
-      <a href="/aboutUs.html">About us</a>
-      <a href="/privacy.html">Privacy Policy</a>
-      <a href="/petspolicy.html">Dog Policy</a>
+      <a href="/about.html">About us</a>
+      <a href="/privacy_policy.html">Privacy Policy</a>
+      <a href="/dog-policy.html">Dog Policy</a>
     </span>
   </div>
   <div class="socials-container">
@@ -278,96 +308,79 @@
   </div>
   <p>&copy; 2024 OutDoor Cinema</p>
 </footer>
- 
-<!--                       logIn form                            -->
-<div id="form" class="container" style="display: none; text-align: center;">
-  <h1 id="title">Sign Up</h1>
-  <form>
-    <div class="input">
-      <div class="inputFeild" id="name">
-        <icon><i class="fa-regular fa-user"></i></icon>
-        <input type="text" name="name" placeholder="User Name">
-      </div>
 
-      <div class="inputFeild" id="email">
-        <i class="fa-regular fa-envelope"></i>
-        <input type="email" name="email" placeholder="example@something.another">
-      </div>
+    <!--                       logIn form                            -->
+  <div class="wrapper" id="wrap" style="display: none;">
+    <div class="form-box login" id="log" style="display: none;">
+      <h2>Log In</h2>
+      <form action="#">
+        <!--email address -->
+        <div class="input-box">
+          <span class="icon">
+            <i class="fa-solid fa-envelope"></i>
+          </span>
+          <input type="text" id="email" name="email" required>
+          <label for="email">email</label>
+        </div>
+        <!-- password -->
+        <div class="input-box">
+          <span class="icon">
+            <i class="fa-solid fa-lock"></i> 
+          </span>
+          <input type="text" id="password" name="password" required>
+          <label for="password">password</label>
+        </div>
+        <!--forgot password-->
+        <div class="remember-password">
+          <a href="#">Forgot Password?</a>
+        </div>
+        <button type="submit" class="btn">Log In</button>
+        <div class="signup">
+          <p>Don't have an account?<br><a href="#" class="registerLink"onclick="register()">Register</a> </p>
+        </div>
+      </form>
+    </div><!--this is the end of the login form -->
 
-      <div class="inputFeild">
-        <i class="fa-solid fa-lock"></i>
-        <input type="password" name="password" placeholder="Password">
-      </div>
-      <p id="informp"><a href="#" id="frmlink">Forgot password?</a></p>
-      <button type="button" class="frmbtn" id="signupbtn">Sign Up</button>
-      <button type="Button" class="frmbtn" id="logInbtn">Log In</button>
-      <button type="=button" class="frmbtn" id="closePopup">Cancel</button>
-    </div>
-    
-  </form>
+    <div class="form-box register" id="reg">
+      <h2>Register</h2>
+      <form action="#">
+        <!--user name -->
+        <div class="input-box">
+          <span class="icon">
+            <i class="fa-solid fa-user"></i>
+          </span>
+          <input type="text" id="username" name="username" required>
+          <label for="username">user name</label>
+        </div>
+        <!--email address-->
+        <div class="input-box">
+          <span class="icon">
+            <i class="fa-solid fa-envelope"></i>
+          </span>
+          <input type="text" id="email" name="email" required>
+          <label for="email">email</label>
+        </div>
+        <!-- password-->
+        <div class="input-box">
+          <span class="icon">
+            <i class="fa-solid fa-lock"></i> 
+          </span>
+          <input type="password" id="password" name="password" required>
+          <label for="password">password</label>
+        </div>
+        <!--forgot password-->
+        <div class="remember-password">
+          <a href="#">Forgot Password?</a>
+        </div>
+        <button type="submit" class="btn">Register</button>
+        <div class="signup">
+          <p>Already have an account?<br><a href="#" class="logInLink" onclick="login()">Login</a> </p>
+        </div>
+      </form>
+    </div><!--this is the end of the registration form -->
 
-  <contact style="display: none;">
-
-  </contact>
-
-<script>
-
-  /* Variable declarations all in one place */
-  let signup = document.getElementById("signupbtn");
-  let login = document.getElementById("logInbtn");
-  let name = document.getElementById("name");
-  let title = document.getElementById("title");
-  let formShowbtn = document.getElementById("formShow");
-  let closePopupButton = document.getElementById('logIn');
-  let overlay = document.getElementById('form');
-
-  /* These just control the seemingly disabled buttons */
-  signup.onclick = function() {
-    name.style.maxHeight = 0;
-    title.innerHTML = "Sign In";
-    signup.classList.add("disabled");
-    login.classList.remove("disabled");
-  }
-
-  login.onclick = function() {
-      name.style.maxHeight = '70px';
-      title.innerHTML = "Sign Up";
-      signup.classList.remove("disabled");
-      login.classList.add("disabled");
-  }
-
-
-
-  /* Show or hide the form, blur the background, and set focus to the form block */
-  formShowbtn.addEventListener('click', function() {
-      if (form.style.display === 'none') {
-          document.getElementById("header").classList.add('blurred');   
-          document.getElementsByTagName('Box1').classList.add("blurred");
-          document.getElementsByTagName('Box2').classList.add("blurred");
-          document.getElementsByTagName('Box3').classList.add("blurred");
-          document.getElementsByTagName('Box4').classList.add("blurred");
-          overlay.style.display = 'block';
-          form.focus();
-          form.classList.add("focus");
-      } else {
-          document.body.classList.remove('blurred');
-          overlay.style.display = 'none';
-          form.style.display = 'none';
-      }
-  });
-
-  /* Close the popup when the button is clicked */
-  closePopupButton.addEventListener('click', function() {
-    document.getElementById("header").classList.remove('blurred');   
-    document.getElementsByTagName('Box1').classList.remove("blurred");
-    document.getElementsByTagName('Box2').classList.remove("blurred");
-    document.getElementsByTagName('Box3').classList.remove("blurred");
-    document.getElementsByTagName('Box4').classList.remove("blurred");
-    overlay.style.display = 'none';
-    form.style.display = 'none';
-  });
-  </script>  
-   
+  </div>
+  <script src="\js\Popup.js"></script>   
 </body>
 
 </html>
