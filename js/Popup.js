@@ -1,19 +1,31 @@
-document.getElementById('top3Link').addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent the default action (navigating to the link)
-    document.getElementById('popup').style.display = 'flex'; // Show the pop-up
-    document.body.classList.add('blur'); // Add blur to the body
-});
+function pop(toHide, toShow) {
+  let show = document.getElementById(toShow) === null ? document.querySelectorAll(toShow) : [document.getElementById(toShow)];
+  let hide = document.getElementById(toHide) === null ? document.querySelectorAll(toHide) : [document.getElementById(toHide)];
 
-document.getElementById('closePopup').addEventListener('click', function() {
-    document.getElementById('popup').style.display = 'none'; // Hide the pop-up
-    document.body.classList.remove('blur'); // Remove blur from the body
-});
+  // Show elements
+  show.forEach(element => {
+      element.style.transform = 'translateX(450px)';
+       
+  });
+  // Hide elements
+  hide.forEach(element => {
+      element.style.transform = 'translateX(450px)';
+  });
+}
+function show(toShow){
+  let it = document.getElementById(toShow);
+  it.style.display='block';
+  it.focus();
+}
 
-// Close the pop-up when clicking outside the content area
-window.onclick = function(event) {
-    const popup = document.getElementById('popup');
-    if (event.target === popup) {
-        popup.style.display = 'none';
-        document.body.classList.remove('blur');
-    }
-};
+function register(){
+  document.getElementById('log').style.display='none';
+  document.getElementById('reg').style.display='block';
+  document.getElementById('wrap').focus();
+}
+
+function login(){
+  document.getElementById('reg').style.display='none';
+  document.getElementById('log').style.display='block';
+  document.getElementById('wrap').focus();
+}

@@ -28,7 +28,7 @@ body {
 }
 
 header {
-  background-color: #212121;
+  
   padding: 10px 20px; /* Adjust padding as needed */
 }
 
@@ -40,7 +40,7 @@ header {
   font-family: "Bebas Neue",sans-serif;
   align-items: center; /* Vertically center the items */
   justify-content: space-between; /* Space between title and nav */
-  background-color: rgba(0, 0, 0, 0.09); /* Fully transparent background */
+  background-color: rgba(0, 0, 0, 0.1); /* Fully transparent background */
   padding: 10px; /* Adjust padding as needed */
  z-index: 1000;
   
@@ -69,6 +69,11 @@ a{
 .fa-solid fa-ticket{
   size: 1000px;
 }
+.fa-video,.fa-paw{
+  font-size: 5rem;
+  
+}
+
 .centered-item .fa-ticket {
    /* Space between icon and text */
   color: #FF331F; /* Default color for the icon */
@@ -178,25 +183,36 @@ a{
 
 .dropdown-menu {
   display: none; /* Hide dropdown by default */
-  position: absolute;
-  left: 0;
-  background-color: #444; /* Dropdown background color */
-  min-width: 160px; /* Minimum width */
-  z-index: 1000; /* Ensure dropdown is on top */
+  position: fixed; /* Fixed positioning to cover the viewport */
+  top: 0; /* Align to the top of the viewport */
+  left: 0; /* Align to the left of the viewport */
+  right: 0; /* Align to the right of the viewport */
+  bottom: 10; /* Align to the bottom of the viewport */
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent white background for the glass effect */
+  backdrop-filter: blur(10px); /* Apply a blur effect to the area behind the dropdown */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: subtle border for additional effect */
+  z-index: 1000; /* Ensure dropdown is above other content */
+  overflow: auto; /* Allow scrolling if content exceeds viewport height */
+
 }
 
-.dropdown-menu li {
-  padding: 12px 16px;
-}
 
-.dropdown-menu li a {
-  color: white;
-  text-decoration: none;
-}
+.links-mobile{
+  display: flex;
+    z-index: 1000; /* Ensure dropdown is below the navbar */
+    overflow: auto; /* Allow scrolling if content exceeds viewport height */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    padding-top:1rem;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    gap: 2rem;
+  }
 
 /* Show dropdown on hover */
-.dropdown:hover .dropdown-menu {
+.hamburger:hover .dropdown-menu {
   display: block;
+  
 }
 
 @media (max-width: 768px) {
@@ -269,10 +285,10 @@ a{
 }
 /* Container for tagline items */
 .taglines {
-
+  
   display: grid; /* Use grid layout */
   grid-template-columns: repeat(3, 1fr); /* Create 3 equal-width columns */
-  gap: 20px; /* Space between grid items */
+  gap: 25px; /* Space between grid items */
   text-align: center; /* Center align text */
   padding: 20px; /* Add padding around the container */
   width: 100%; /* Full width of the parent container */
@@ -281,7 +297,14 @@ a{
 }
 
 
+.home-link {
+  text-decoration: none; /* Remove underline from the link */
+  color: inherit; /* Inherit the text color from the parent element */
+}
 
+.header-container h1:hover {
+  opacity: 0.8; /* Example hover effect */
+}
 /* Individual tagline item styling */
 .tagline-item {
    /* Adjust this value to move tagline items down */
@@ -327,44 +350,17 @@ a{
 
 
 
-@media (max-width: 1950px) {
-  .taglines {
-    padding-bottom: 15%;
-    grid-template-columns: 1 2fr; /* Single column layout on small screens */
-   /* Reduce space between items */
-  }
-  .tagline-item{
-    padding: 0%;
-  }
-  .title1{
-    margin-bottom: 0;
-    font-size: 1rem;
-
-  }
-
-  .taglines h2 {
-    font-size: 1.2rem; /* Smaller font size for headings */
-  }
-
-  .tagdescription p {
-    
-   
-    /* Remove the tagdescription text */
-  
-    
-  }
-}
-
-
 
 @media (max-width: 950px) {
   .taglines {
-    padding-bottom: 15%;
+    padding-bottom: 20%;
+    column-gap: 5rem;
     grid-template-columns: 1 2fr; /* Single column layout on small screens */
    /* Reduce space between items */
   }
   .tagline-item{
-    padding: 0%;
+    padding: 3%;
+    
   }
   .title1{
     margin-bottom: 0;
@@ -390,6 +386,7 @@ a{
   .taglines {
     padding-bottom: 15%;
     grid-template-columns: 1 2fr; /* Single column layout on small screens */
+
    /* Reduce space between items */
   }
   .tagline-item{
@@ -473,8 +470,23 @@ a{
     gap: 5%; /* Reduce space between items */
     padding-bottom: 60%;
     margin-top: -60rem;
+    .tagline-item{
+    
+      padding: -40px; /* Padding for spacing */
+      border: 1px solid rgba(255, 255, 255, 0.2); /* Light border with opacity */
+      border-radius: 8px; /* Rounded corners */
+      backdrop-filter: blur(10px); /* Blur effect for background */
+      max-width: 100%; /* Prevent overflow */
+     
+   }
   }
-
+  .fa-video{
+    font-size: 3rem;
+    
+    
+    
+    
+  }
  
   .title1{
     margin-bottom: 0;
@@ -738,11 +750,30 @@ a{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 footer {
   display: flex;
   flex-direction: column; /* Stack content vertically */
   align-items: center; /* Center items horizontally */
-  padding: 20px; /* Add padding around the footer */
+  padding: 1rem; /* Add padding around the footer */
   background-color: #333; /* Dark background color */
   color: white; /* Text color */
   font-family: Arial, sans-serif; /* Font family */
@@ -755,7 +786,7 @@ footer p {
 .links-container,
 .socials-container {
   text-align: center; /* Center-align text within containers */
-  margin-bottom: 20px; /* Space between sections */
+  margin-bottom: 10px; /* Space between sections */
 }
 
 .links-container h3,
@@ -795,4 +826,244 @@ footer p {
 
 .socials a:hover {
   opacity: 0.7; /* Slight fade effect on hover */
+}
+
+
+
+/* DOG */
+/* styles.css */
+
+.box1-pets {
+  z-index: 1; /* Ensure it's beneath the header */
+  margin-top: -100px; 
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+ 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title1-pets {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title1-pets i {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.title1-pets h2 {
+  font-size: 24px;
+  margin: top 10px;
+
+  .policy-container {
+    margin-bottom: 20px;
+}
+
+.policy-container h2 {
+    font-size: 18px;
+    margin-top: 0;
+}
+
+.policy-container p {
+    margin-bottom: 10px;
+}
+
+.policy-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.policy-container li {
+    margin-bottom: 10px;
+}
+
+.policy-container li::before {
+    content: "\2022";
+    margin-right: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.links-container, .socials-container {
+    margin-bottom: 20px;
+}
+
+.links-container h3, .socials-container h3 {
+    margin-bottom: 10px;
+}
+
+.links-container .links, .socials-container .socials {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.links-container .links a, .socials-container .socials a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.links-container .links a:hover, .socials-container .socials a:hover {
+    color: #ccc;
+}
+
+.socials-container .socials i {
+    font-size: 24px;
+}
+
+@media (max-width: 600px) {
+    .box1-pets {
+        padding: 10px;
+    }
+    .title1-pets h2 {
+        font-size: 18px;
+    }
+    .policy-container h2 {
+        font-size: 16px;
+    }
+    .policy-container p {
+        font-size: 14px;
+    }
+    .policy-container li {
+        font-size: 14px;
+    }
+    footer {
+        padding: 10px;
+    }
+}
+}
+
+/* Style for the logo container to center the image */
+.logo-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  margin-top: 20px; /* Space above the logo */
+}
+
+/* Style for the logo image */
+.logo {
+  max-width: 100%; /* Ensure logo is responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+.box1-book {
+  padding: 40px 20px; /* Add padding to give space inside the section */
+  margin-bottom: 50px; /* Add margin-bottom to push content down */
+  
+}
+
+/* Make sure the logo is centered */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 250px;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* Push the footer to the bottom if there's not enough content */
+.content {
+  flex: 1; /* Allows the content section to grow and push the footer down */
+}
+=======
+.form{
+    /*code for the form container*/
+    width: 90%;
+    max-width:300px;
+    position:relative;
+    top:50%;
+    left:50%;
+    background-color:rgba(0, 0, 0, 0.99);
+    border: white;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    padding: 50px 60px 70px;
+    text-align: center;
+    padding: auto;
+    font-family: 'Bebas Neue', sans-serif;
+}
+.inputFeild{
+    display: flex; /*makes the icon overlap the image or be seemingly on it*/
+    align-items: center;
+    max-height: 70px;
+    transition: max-height 1s;
+    overflow: hidden;;
+}
+
+.frmbtn{
+  color: #333;
+  border:none;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 12px;
+  text-decoration: none;
+  padding: 0;
+  width:100%;
+  height: 28px;
+  margin: 3px;
+  font-size: 20px;
+}
+
+input{
+    width:100%;
+    margin: 7px;
+    border: 1px;
+    padding: 13px 15px ;
+    border-radius: 20px;
+    background-color: rgb(34, 33, 33);
+
+}
+
+.blurred {
+    filter: blur(5px);
+    pointer-events: none;
+    z-index: 10;
+}
+.focus {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(68, 68, 68);
+    padding: 20px;
+    z-index: 1000; /* High z-index to stay on top */
+    pointer-events: auto;
+    display: block;
+    border-radius: 15px;
+    
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999; /* Slightly lower than the form */
+    display: none;
+}
+
+#informp{
+  margin-top: 1px;
+  font-size: 20px;
+}
+#frmlink{
+  font-size: 10px;
+}
+
+#title{
+  margin-top: 0;
+  margin-bottom: 0;
 }

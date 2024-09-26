@@ -4,87 +4,71 @@
     <meta charset="utf-8">
     <title>OutDoor Cinema</title>
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
-    <link rel="stylesheet" type="text/css" href="/css/PopUp.css">
-    <link rel="stylesheet" type="text/css" href="/css/Leaderboard.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
-    <script src="/js/Popup.js"></script>
-    <script src="/js/sketch.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script> -->
+    <!-- <script src="/js/sketch.js"></script> -->
+   
+
+
 </head>
-<body>
-    <header>
+<body >
+    <header id="header">
         <div class="header-container">
-            <button class="hamburger" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
+          <div class="hamburger ">
+            <button class="hamburger"><i class="fa-solid fa-bars"></i></button>
+            <div class="dropdown-menu">
+              <div class = "links-mobile">
+              <a class = "booking-ticket" href="/book.html" >Book Now</a>
+              <a href="/login.html" >Login/join</a>
+              <a href="/top3.html" >Top 3 Movies</a>
+              <a href="/petspolicy.html" >Pets Policy</a>
+              <a href="/aboutus.html" >About us</a>
+
+            </div>
+
+          </div>
+          </div>
+          <a href="/" class="home-link">
             <h1>OutDoor Cinema</h1>
+          </a>
             <nav class="topnav">
                 <ul>
-                    <li class="centered-item">
-                        <span class="hide">
-                            <i class="fa-solid fa-ticket"></i><br>
-                        </span>
-                        <a class="booking-ticket" href="/book.html">Book Now</a>
+                    <li class = "centered-item"><span class="hide" >
+                      <i class="fa-solid fa-ticket"></i><br>
+                      </span>
+                      <a class = "booking-ticket" href="/book.html" >Book Now</a></li>
+                    
+                    
+                    <li class = "centered-item">
+                    <span  class = hide>
+                        <i class="fa-solid fa-user"></i><br>
+                    </span>
+                    <a href="#" id="logIn" >Login/join</a>
+                
                     </li>
                     
-                    <li class="centered-item">
-                        <span class="hide">
-                            <i class="fa-solid fa-user"></i><br>
+                    <li class = "centered-item">
+                        <span class =hide><i class="fa-solid fa-clapperboard"></i><br>
                         </span>
-                        <a href="#" id="formShow">Login/join</a>
-                    </li>
-                    
-                    <li class="centered-item">
-                        <span class="hide">
-                            <i class="fa-solid fa-clapperboard"></i><br>
-                        </span>
-                        <a href="#" id="top3Link">Top 3 Movies</a>
-                    </li>
+                        <a href="/top3.html" >Top 3 Movies</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
-    <!-- Pop-up content -->
-    <div id="popup" class="popup .taglines">
-        <div class="leaderboard-container">
-          <h2 style="margin: 10px;">TOP 3 Movies</h2>
-          <div class="leaderboard">
-              <div class="rank-card second">
-                  <img src="images/deadpoo.jpg" alt="Li Fang" class="profile-pic">
-                  <p style="font-size: 12px;">DEADPOOL AND WOLVERINE</p>
-                  <p class="stars">⭐ 52 Votes</p>
-                  <div class="rank">2</div>
-              </div>
-
-              <div class="rank-card first">
-                  <img src="images/HO00003131.jpg" alt="Stephen Chen" class="profile-pic">
-                  <p style="font-size: 15px;">ALIEN ROMULUS</p>
-
-                  <p class="stars">🏆 70 Votes</p>
-                  <div class="rank">1</div>
-              </div>
-              <div class="rank-card third">
-                  <img src="images/HO00002989.jpg" alt="Janson" class="profile-pic">
-                  <p style="font-size: 12px;">INSIDE OUT 2</p>
-                  <p class="stars">⭐ 42 Votes</p>
-                  <div class="rank">3</div>
-              </div>
-              <span id="closePopup" class="close">&times;</span>
-          </div>
-      </div>
-    </div>
-
-    
-
-    <script src="/js/Popup.js"></script>
-
     <section class = "box1">
         <section class = "title1">
+          <i class="fa-solid fa-video"></i>
         <p>Transform your movie nights into magical evenings with us <br>where every film is a grand adventure beneath the open sky. <br>
             Our outdoor cinema combines the best of cinematic wonder with the charm of nature,<br> offering you an unforgettable experience.</p>
           </section>
@@ -142,55 +126,47 @@
           </div>
     </section>
 
-    <section>
-      <h1 class="sections">MOVIE VOTING</h1>
-      <div class="image-container">
-          <div class="image-wrapper">
-            <img src="images/deadpoo.jpg" alt="movie1">
-            <div class="overlay">
-              <div class="overlay-content">
-                <h3 class="overlay-header">DEADPOOL & WOLVERINE</h3>
-                <p>Vote</p>
-                <button class="vote-btn">Click to Vote</button>
-              </div>
+    <section class = "box3">
+        <h1 class="sections">MOVIE VOTING?</h1>
+        <div class="image-container">
+            <div class="image-wrapper">
+              <img src="images/deadpoo.jpg" alt="movie1">
+              <div class="overlay">DEADPOOL & WOLVERINE</div>
             </div>
-          </div>
-          
-          <div class="image-wrapper">
-            <img src="images/HO00002989.jpg" alt="movie2">
-            <div class="overlay">
-              <div class="overlay-content">
-                <h3 class="overlay-header">INSIDE OUT 2</h3>
-                <p>Vote</p>
-                <button class="vote-btn">Click to Vote</button>
-              </div>
+            <div class="image-wrapper">
+              <img src="images/HO00002989.jpg" alt="movie2">
+              <div class="overlay">INSIDE OUT 2</div>
             </div>
-          </div>
+            <div class="image-wrapper">
+              <img src="images/HO00003131.jpg" alt="movie3">
+              <div class="overlay">ALIEN ROMULUS</div>
+            </div>
+            <div class="image-wrapper">
+              <img src="images/HO00002926.jpg" alt="movie4">
+              <div class="overlay">IT ENDS WITH US</div>
+            </div>
 
-
-          <div class="image-wrapper">
-            <img src="images/HO00003131.jpg" alt="movie3">
-            <div class="overlay">
-              <div class="overlay-content">
-                <h3 class="overlay-header">ALIEN ROMULUS</h3>
-                <p>Vote</p>
-                <button class="vote-btn">Click to Vote</button>
-              </div>
+            <div class="image-wrapper">
+              <img src="images/deadpoo.jpg" alt="movie1">
+              <div class="overlay">DEADPOOL & WOLVERINE</div>
             </div>
-          </div>
 
-          
-          <div class="image-wrapper">
-            <img src="images/HO000303086.jpg" alt="movie4">
-            <div class="overlay">
-              <div class="overlay-content">
-                <h3 class="overlay-header">A QUIET PLACE DAY ONE</h3>
-                <p>Vote</p>
-                <button class="vote-btn">Click to Vote</button>
-              </div>
+            <div class="image-wrapper">
+              <img src="images/deadpoo.jpg" alt="movie1">
+              <div class="overlay">DEADPOOL & WOLVERINE</div>
             </div>
+
+            <div class="image-wrapper">
+              <img src="images/deadpoo.jpg" alt="movie1">
+              <div class="overlay">DEADPOOL & WOLVERINE</div>
+            </div>
+
+            <div class="image-wrapper">
+              <img src="images/deadpoo.jpg" alt="movie1">
+              <div class="overlay">DEADPOOL & WOLVERINE</div>
+            </div>
+
           </div>
-        </div>
     </section>
 
     <section class ="box4">
@@ -267,20 +243,20 @@
       </span>
         <br style="clear: both;">
       </section>
-      <hr>
-     <section class = "box5">
 
-      <h1 class  = "sections">REVIEWS</h1>
-      <p style="text-align: center;">It was nice </p>
-      <p>1111</p><br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      
-     </section>
-<hr>
+      <section class="box5">
+    <h1 class="sections">REVIEWS</h1>
+    <p class="marquee">
+        <span>"The outdoor cinema experience was outstanding. The ambiance was perfect and the screen quality was exceptional!" - <br>Sarah Johnson&nbsp;</span>
+    </p>
+    <p class="marquee marquee2">
+        <span>"I had a fantastic time at the outdoor cinema. The atmosphere was relaxed, and the sound system was top-notch!" - <br>David Lee&nbsp;</span>
+    </p>
+</section>
+
+                
+    </section>
+
     
 <footer>
   
@@ -288,9 +264,9 @@
     <h3>Useful Links</h3> <!-- Added heading for the links section -->
     <span class="links">
       <a href="/contact.html">Contact us</a>
-      <a href="/about.html">About us</a>
+      <a href="/aboutUs.html">About us</a>
       <a href="/privacy.html">Privacy Policy</a>
-      <a href="/dog-policy.html">Dog Policy</a>
+      <a href="/petspolicy.html">Dog Policy</a>
     </span>
   </div>
   <div class="socials-container">
@@ -302,81 +278,95 @@
   </div>
   <p>&copy; 2024 OutDoor Cinema</p>
 </footer>
+ 
+<!--                       logIn form                            -->
+<div id="form" class="container" style="display: none; text-align: center;">
+  <h1 id="title">Sign Up</h1>
+  <form>
+    <div class="input">
+      <div class="inputFeild" id="name">
+        <icon><i class="fa-regular fa-user"></i></icon>
+        <input type="text" name="name" placeholder="User Name">
+      </div>
 
-     <!--                       logIn form                            -->
-  <div id="form" class="container" style="display: none;">
-    <div class="form-box">
-      <h1 id="title">Sign Up</h1>
-      <form>
-        <div class="input">
-          <div class="inputFeild" id="name">
-            <icon></icon>
-            <input type="text" name="name" placeholder="User Name">
-          </div>
+      <div class="inputFeild" id="email">
+        <i class="fa-regular fa-envelope"></i>
+        <input type="email" name="email" placeholder="example@something.another">
+      </div>
 
-          <div class="inputFeild" >
-            <icon></icon>
-            <input type="email" name="email" placeholder="example@something.another">
-          </div>
-
-          <div class="inputFeild">
-            <icon></icon>
-            <input type="password" name="password" placeholder="Password">
-          </div>
-          <p>Forgot password?<br><a href="#">Click Here</a></p>
-        </div>
-        <div class="buttons">
-          <button type="button" id="signupbtn">Sign Up</button>
-          <button type="Button" id="signinbtn">Log In</button>
-        </div>
-      </form>
+      <div class="inputFeild">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" name="password" placeholder="Password">
+      </div>
+      <p id="informp"><a href="#" id="frmlink">Forgot password?</a></p>
+      <button type="button" class="frmbtn" id="signupbtn">Sign Up</button>
+      <button type="Button" class="frmbtn" id="logInbtn">Log In</button>
+      <button type="=button" class="frmbtn" id="closePopup">Cancel</button>
     </div>
-  </div>
-	
-  <script>
+    
+  </form>
 
-  /*variable declarations all in one place*/
-    let signup = document.getElementById("signupbtn");
-    let signin = document.getElementById("signinbtn");
-    let name = document.getElementById("name");
-    let title = document.getElementById("title");
-    let formShowbtn = document.getElementById("formShow");
+  <contact style="display: none;">
 
-  /*these just control the seemingly disabled buttons*/
-    signin.onclick = function(){
-      name.style.maxHeight = 0;
-      title.innerHTML="Sign In";
-      signup.classList.add("disabled");
-      signin.classList.remove("disabled");
-    }
+  </contact>
 
-    signup.onclick = function(){
-      name.style.maxHeight = 0;
-      title.innerHTML="Sign Up";
+<script>
+
+  /* Variable declarations all in one place */
+  let signup = document.getElementById("signupbtn");
+  let login = document.getElementById("logInbtn");
+  let name = document.getElementById("name");
+  let title = document.getElementById("title");
+  let formShowbtn = document.getElementById("formShow");
+  let closePopupButton = document.getElementById('logIn');
+  let overlay = document.getElementById('form');
+
+  /* These just control the seemingly disabled buttons */
+  signup.onclick = function() {
+    name.style.maxHeight = 0;
+    title.innerHTML = "Sign In";
+    signup.classList.add("disabled");
+    login.classList.remove("disabled");
+  }
+
+  login.onclick = function() {
+      name.style.maxHeight = '70px';
+      title.innerHTML = "Sign Up";
       signup.classList.remove("disabled");
-      signin.classList.add("disabled");
-    }
+      login.classList.add("disabled");
+  }
 
-  /*
-  this will show or hide the form from the screen
-  blur the background page
-  set the focu to the form block
 
-  */
-    formShowbtn.addEventListener('click', function(){
-    const form = document.getElementById("form");
-    if (form.style.display==='none'){
-      form.style.display ='block';
-      }else{
-        form.style.display='none'
-    }
-    document.style.filter  = 'blur(2px)';
-    document.getElementById('form').style.filter = 'none';
-    document.getElementById('form').focus;
-    
-    });
-    
-  </script>   
+
+  /* Show or hide the form, blur the background, and set focus to the form block */
+  formShowbtn.addEventListener('click', function() {
+      if (form.style.display === 'none') {
+          document.getElementById("header").classList.add('blurred');   
+          document.getElementsByTagName('Box1').classList.add("blurred");
+          document.getElementsByTagName('Box2').classList.add("blurred");
+          document.getElementsByTagName('Box3').classList.add("blurred");
+          document.getElementsByTagName('Box4').classList.add("blurred");
+          overlay.style.display = 'block';
+          form.focus();
+          form.classList.add("focus");
+      } else {
+          document.body.classList.remove('blurred');
+          overlay.style.display = 'none';
+          form.style.display = 'none';
+      }
+  });
+
+  /* Close the popup when the button is clicked */
+  closePopupButton.addEventListener('click', function() {
+    document.getElementById("header").classList.remove('blurred');   
+    document.getElementsByTagName('Box1').classList.remove("blurred");
+    document.getElementsByTagName('Box2').classList.remove("blurred");
+    document.getElementsByTagName('Box3').classList.remove("blurred");
+    document.getElementsByTagName('Box4').classList.remove("blurred");
+    overlay.style.display = 'none';
+    form.style.display = 'none';
+  });
+  </script>  
    
 </body>
 
